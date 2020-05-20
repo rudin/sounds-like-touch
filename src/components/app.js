@@ -5,6 +5,8 @@ import ShiftRadiusAndAngle, { useShift } from "./ShiftRadiusAndAngle"
 import ShiftWithSpring, { useShift as useSpringShift } from "./ShiftWithSpring"
 import MousePosition from "./MousePosition"
 import Bounce from "./Bounce"
+import Oscillator from "./Oscillator"
+import BounceOscillatorVolume from "./BounceOscillatorVolume"
 
 const segmentCount = 8
 // een cirkel, onderverdeeld in 8 hoeken / vlakken
@@ -115,6 +117,13 @@ const App = () => {
         Bounce, based on mouse position, bounce faster...
       </div>
       <Bounce />
+      <div style={{ marginTop: 20, marginBottom: "1em" }}>Go Sound!</div>
+      <Oscillator />
+      <div style={{ marginTop: 20, marginBottom: "1em" }}>
+        Bounce the volume of the sound.
+      </div>
+      <BounceOscillatorVolume />
+      <div style={{ height: 40 }}></div>
     </div>
   )
 }
