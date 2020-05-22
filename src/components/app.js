@@ -44,6 +44,7 @@ const App = () => {
 
   const radiusSpring = useSpringShift({ count: segmentCount, tick })
   const angleSpring = useSpringShift({ count: segmentCount, tick })
+  // return <BounceOscillatorVolume />
 
   return (
     <div id="app" style={{ padding: 40 }}>
@@ -123,7 +124,7 @@ const App = () => {
         Bounce the volume of the sound.
       </div>
       <BounceOscillatorVolume />
-      <div style={{ height: 40 }}></div>
+      <div style={{ height: 40 }} />
     </div>
   )
 }

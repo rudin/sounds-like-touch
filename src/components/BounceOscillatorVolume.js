@@ -43,7 +43,7 @@ const Bounce = () => {
       // ... easily generate the css transform value below.
       shrink: 1,
       // Setup physics
-      config: { mass: 3, tension: 500, friction: 30, precision: 0.2 },
+      config: { mass: 3, tension: 500, friction: 30, precision: 0.00001 },
     }
   })
 
