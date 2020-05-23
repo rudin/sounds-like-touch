@@ -1,7 +1,7 @@
 import { h } from "preact"
 
 const Home = () => (
-  <>
+  <div style={{ background: "#FFF" }}>
     <section>
       <p>
         {`Sounds Like Touch aims to develop and encourage a for both performer and audience tangible and accessible practice of creating and performing electronic and electroacoustic music.`}
@@ -53,7 +53,7 @@ const Home = () => (
         CoC: 74526707
       </p>
     </section>
-  </>
+  </div>
 )
 
 export default Home

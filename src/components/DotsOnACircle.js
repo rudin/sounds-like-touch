@@ -13,7 +13,7 @@ const Dot = ({ x, y }) => (
       height: 8,
       borderRadius: 4,
       transform: "translate3D(-4px, -4px, 0)",
-      backgroundColor: "red",
+      backgroundColor: "black",
     }}
   />
 )

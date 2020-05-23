@@ -1,4 +1,4 @@
-import { h } from "preact"
+import { h, Fragment } from "preact"
 import { useState, useEffect, useRef } from "preact/hooks"
 import DotsOnACircle from "./DotsOnACircle"
 import ShiftRadiusAndAngle, { useShift } from "./ShiftRadiusAndAngle"
@@ -49,9 +49,9 @@ const App = () => {
   // return <BounceOscillatorVolume />
 
   return (
-    <>
+    <Fragment>
       <GradientBackground />
-      <div id="app" style={{ padding: 40 }}>
+      <div id="app" style={{ padding: 40, backgroundColor: "#FFF" }}>
         <Home />
         <div style={{ marginTop: 100 }}>Run a 'ticker' to animate on.</div>
         <div style={{ marginTop: 100 }} onClick={pause}>
@@ -129,10 +129,10 @@ const App = () => {
         <div style={{ marginTop: 20, marginBottom: "1em" }}>
           Bounce the volume of the sound.
         </div>
-        <BounceOscillatorVolume />
+        <BounceOscillatorVolume tick={tick} />
         <div style={{ height: 40 }} />
       </div>
-    </>
+    </Fragment>
   )
 }
 

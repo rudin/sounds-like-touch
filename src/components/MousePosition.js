@@ -25,7 +25,7 @@ const MousePosition = () => {
       style={{
         width: 300,
         height: 200,
-        backgroundColor: "#DDD",
+        border: "3px solid black",
         marginBottom: 40,
         padding: "1em",
       }}

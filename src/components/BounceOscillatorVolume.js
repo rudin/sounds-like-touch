@@ -6,7 +6,7 @@ import { useSpring } from "react-spring"
 import Oscillator from "./Oscillator"
 import Sawtooth from "./Sawtooth"
 
-const Bounce = () => {
+const Bounce = ({ tick }) => {
   const timeout = useRef()
   const ms = useRef()
   const [x, y, ref, mousePosition] = useMousePositionAsFactorFromCenter(
@@ -57,7 +57,7 @@ const Bounce = () => {
         position: "relative",
         width: 300,
         height: 200,
-        backgroundColor: "#DDD",
+        border: "3px solid black",
         marginBottom: 40,
         padding: "1em",
       }}
@@ -78,6 +78,7 @@ const Bounce = () => {
       />
       <Oscillator volume={animatedProps.shrink.value / 1.3} />
       <Sawtooth volume={Math.abs(x) * -20 || -20000} />
+      {tick}
     </div>
   )
 }
