@@ -7,9 +7,6 @@ const Home = () => (
         {`Sounds Like Touch aims to develop and encourage a for both performer and audience tangible and accessible practice of creating and performing electronic and electroacoustic music.`}
       </p>
       <p>
-        {`Sounds Like Touch aims to develop and encourage a for both performer and audience tangible and accessible practice of creating and performing electronic and electroacoustic music.`}
-      </p>
-      <p>
         {`Sounds Like Touch enables the evolution of new methods, means, technologies and products for making electronic-and electroacoustic music.`}
       </p>
       <p>
@@ -19,7 +16,9 @@ const Home = () => (
     <section>
       <p>
         <h1>Who</h1>
-        Dianne Verdonk Initiator
+        Dianne Verdonk
+        <br />
+        Initiator
       </p>
       <p>
         {`Performer, composer and instrument developer - who seeks the ultimate, personal form of musical expression in the creation and performance of electronic/electroacoustic music.`}

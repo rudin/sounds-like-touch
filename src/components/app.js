@@ -7,6 +7,7 @@ import MousePosition from "./MousePosition"
 import Bounce from "./Bounce"
 import Oscillator from "./Oscillator"
 import BounceOscillatorVolume from "./BounceOscillatorVolume"
+import Home from "./Home"
 
 const segmentCount = 8
 // een cirkel, onderverdeeld in 8 hoeken / vlakken
@@ -48,6 +49,7 @@ const App = () => {
 
   return (
     <div id="app" style={{ padding: 40 }}>
+      <Home />
       <div style={{ marginTop: 100 }}>Run a 'ticker' to animate on.</div>
       <div style={{ marginTop: 100 }} onClick={pause}>
         {running && "Running "}

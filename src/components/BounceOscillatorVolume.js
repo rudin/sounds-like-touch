@@ -4,6 +4,7 @@ import { useMousePositionAsFactorFromCenter } from "./MousePosition"
 import useToggle from "react-use-toggle"
 import { useSpring } from "react-spring"
 import Oscillator from "./Oscillator"
+import Sawtooth from "./Sawtooth"
 
 const Bounce = () => {
   const timeout = useRef()
@@ -76,6 +77,7 @@ const Bounce = () => {
         }}
       />
       <Oscillator volume={animatedProps.shrink.value / 1.3} />
+      <Sawtooth volume={Math.abs(x) * -20 || -20000} />
     </div>
   )
 }
