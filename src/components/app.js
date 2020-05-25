@@ -70,7 +70,14 @@ const App = () => {
             marginRight: "auto",
           }}
         >
-          <div style={{ position: "relative" }}>
+          <div
+            style={{
+              position: "relative",
+              height: 0,
+              paddingBottom: "85%",
+              overflowY: "visible",
+            }}
+          >
             <h1 style={{ textTransform: "uppercase", position: "absolute" }}>
               Sounds
             </h1>
