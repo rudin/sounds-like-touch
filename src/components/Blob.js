@@ -21,15 +21,33 @@ export default ({
     >
       <path
         fill="black"
-        d={
-          points
-            .map(({ angle, radius }, index) => {
+        d={`${
+          points.reduce((collect, { angle, radius }, index) => {
+            const x = 250 + Math.cos(angle) * radius
+            const y = 250 + Math.sin(angle) * radius
+            const bezierX = 250 + Math.cos(angle) * radius * 1.1
+            const bezierY = 250 + Math.sin(angle) * radius * 1.1
+            // SIMPLE LINES: return collect + `${index === 0 ? "M" : "L"} ${x},${y}`
+            const nextPoint =
+              index < points.length - 1 ? points[index + 1] : points[0]
+            const nextX = 250 + Math.cos(nextPoint.angle) * radius
+            const nextY = 250 + Math.sin(nextPoint.angle) * radius
+            const nextBezierX = 250 + Math.cos(nextPoint.angle) * radius * 1.1
+            const nextBezierY = 250 + Math.sin(nextPoint.angle) * radius * 1.1
+
+            // return `${collect  }${index === 0 ? "M" : "L"} ${x},${y}`
+            return `${collect}
+            M ${x},${y}
+            C ${bezierX},${bezierY}
+              ${nextBezierX},${nextBezierY}
+              ${nextX},${nextY}`
+          }, "")
+          /* .map(({ angle, radius }, index) => {
               const x = 250 + Math.cos(angle) * radius
               const y = 250 + Math.sin(angle) * radius
               return `${index === 0 ? "M" : "L"} ${x},${y}`
-            })
-            .join("\n ") + " Z"
-        }
+            }) */
+        } Z`}
       />
     </svg>
   )
