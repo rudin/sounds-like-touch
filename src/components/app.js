@@ -65,7 +65,7 @@ const App = () => {
       >
         <div
           style={{
-            maxWidth: 720,
+            maxWidth: 600,
             marginLeft: "auto",
             marginRight: "auto",
           }}
