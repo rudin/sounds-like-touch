@@ -82,13 +82,36 @@ const App = () => {
               d="  M 25,100 C 25,150 75,150 75,100 S 100,25 150,75  "
             />
           </svg> */}
+          <div style={{ position: "relative" }}>
+            <h1 style={{ textTransform: "uppercase", position: "absolute" }}>
+              Sounds
+            </h1>
+            <h1
+              style={{
+                textTransform: "uppercase",
+                position: "absolute",
+                right: 0,
+              }}
+            >
+              Like
+            </h1>
+            <h1
+              style={{
+                textTransform: "uppercase",
+                position: "absolute",
+                bottom: 0,
+              }}
+            >
+              Touch
+            </h1>
+            <Blob
+              points={radiusSpring.map((value, index) => ({
+                radius: 165 + value * 80,
+                angle: calcAngle(index, segmentCount) + angleSpring[index] / 3,
+              }))}
+            />
+          </div>
           <div onClick={toggle}>...process</div>
-          <Blob
-            points={radiusSpring.map((value, index) => ({
-              radius: 165 + value * 80,
-              angle: calcAngle(index, segmentCount) + angleSpring[index] / 3,
-            }))}
-          />
           {!process && <Home />}
           {process && (
             <Fragment>
