@@ -8,7 +8,8 @@
     "serve": "sirv build --cors --single",
     "dev": "preact watch --template src/index.html",
     "lint": "eslint src",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "surge ./build https://slt.surge.sh"
   },
   "eslintConfig": {
     "extends": "preact",
