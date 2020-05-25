@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "preact build",
+    "build": "preact build --template src/index.html --no-prerender",
     "serve": "sirv build --cors --single",
-    "dev": "preact watch",
+    "dev": "preact watch --template src/index.html",
     "lint": "eslint src",
     "test": "jest"
   },
