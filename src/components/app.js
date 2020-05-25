@@ -58,7 +58,8 @@ const App = () => {
       <div
         id="app"
         style={{
-          padding: 40,
+          paddingLeft: "5vw",
+          paddingRight: "5vw",
           backgroundColor: "#FFF",
           minHeight: "100vh",
         }}

@@ -4,6 +4,12 @@ import { useMousePositionAsFactorFromCenter } from "./MousePosition"
 import { useBounce } from "./BounceOscillatorVolume"
 import Oscillator from "./Oscillator"
 import Sawtooth from "./Sawtooth"
+import Sound from "react-sound"
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock"
 // every point consists of an object with the angle, radius
 // render as svg
 
@@ -30,14 +36,24 @@ export default ({
 
   const [active, setActive] = useState(false)
 
-  const { shrink, animatedProps } = useBounce(mouseY)
+  useEffect(() => {
+    if (active) {
+      disableBodyScroll()
+    } else {
+      clearAllBodyScrollLocks()
+    }
+  }, [active])
 
+  const { shrink, animatedProps } = useBounce(mouseY)
+  console.log(mouseX, (0.5 - Math.abs(mouseX)) * 200)
   return (
     <div
       style={{ position: "absolute", left: 0, right: 0, top: 0, bottom: 0 }}
       ref={ref}
       onMouseDown={() => setActive(true)}
       onMouseUp={() => setActive(false)}
+      onTouchStart={() => setActive(true)}
+      onTouchEnd={() => setActive(false)}
     >
       <svg
         viewBox="0 0 550 550"
@@ -93,6 +109,14 @@ export default ({
         <Oscillator volume={animatedProps.shrink.value / 1.3} autoPlay />
       )}
       {active && <Sawtooth volume={Math.abs(mouseX) * -5 || -20000} autoPlay />}
+      {active && (
+        <Sound
+          url="assets/guitar-loop.mp3"
+          loop={true}
+          playStatus={Sound.status.PLAYING}
+          volume={Math.max(0, (0.5 - Math.abs(mouseX)) * 200) || 0}
+        />
+      )}
     </div>
   )
 }

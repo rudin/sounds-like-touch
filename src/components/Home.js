@@ -16,7 +16,7 @@ const Home = () => (
     <section>
       <p>
         <h1>Who</h1>
-        Dianne Verdonk
+        <i>Dianne Verdonk</i>
         <br />
         Initiator
       </p>
@@ -24,17 +24,17 @@ const Home = () => (
         {`Performer, composer and instrument developer - who seeks the ultimate, personal form of musical expression in the creation and performance of electronic/electroacoustic music.`}
       </p>
       <p>
-        Rens Machielse
+        <i>Rens Machielse</i>
         <br />
         Board member
       </p>
       <p>
-        Rob van Rijswijk
+        <i>Rob van Rijswijk</i>
         <br />
         Board member
       </p>
       <p>
-        Marisa Tempel
+        <i>Marisa Tempel</i>
         <br />
         Board member
       </p>
