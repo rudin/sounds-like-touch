@@ -53,18 +53,25 @@ export default ({
               return `${collect}
             ${
               index === 0
-                ? `M ${x},${y}`
-                : `${x},${y}
-            `
+                ? `M ${x},${y}
+                `
+                : `T ${x},${y}
+                `
             }
-            T ${bezierX},${bezierY}`
+            ${
+              index === points.length - 1
+                ? `T ${nextX},${nextY}
+            `
+                : ""
+            }
+            `
             }, "")
             /* .map(({ angle, radius }, index) => {
               const x = 250 + Math.cos(angle) * radius
               const y = 250 + Math.sin(angle) * radius
               return `${index === 0 ? "M" : "L"} ${x},${y}`
             }) */
-          } Z`}
+          }`}
         />
       </svg>
     </div>
