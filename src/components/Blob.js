@@ -24,7 +24,7 @@ export default ({
           fill="black"
           d={`${
             points.reduce((collect, { angle, radius }, index) => {
-              const bezierFactor = 0.7
+              const bezierFactor = 1.5
               const x = 250 + Math.cos(angle) * radius
               const y = 250 + Math.sin(angle) * radius
               const bezierX = 250 + Math.cos(angle) * radius * bezierFactor
@@ -42,10 +42,10 @@ export default ({
               // return `${collect  }${index === 0 ? "M" : "L"} ${x},${y}`
 
               return `${collect}
-            ${index === 0 ? "M" : "L"} ${x},${y}
+            ${index === 0 ? `M ${x},${y}` : `${x},${y}`}
             C ${bezierX},${bezierY}
               ${nextBezierX},${nextBezierY}
-              ${nextX},${nextY}`
+              ${index === points.length - 1 ? `${nextX},${nextY}` : ``}`
             }, "")
             /* .map(({ angle, radius }, index) => {
               const x = 250 + Math.cos(angle) * radius
