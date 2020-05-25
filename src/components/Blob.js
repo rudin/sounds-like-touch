@@ -23,17 +23,20 @@ export default ({
         fill="black"
         d={`${
           points.reduce((collect, { angle, radius }, index) => {
+            const bezierFactor = 1
             const x = 250 + Math.cos(angle) * radius
             const y = 250 + Math.sin(angle) * radius
-            const bezierX = 250 + Math.cos(angle) * radius * 1.5
-            const bezierY = 250 + Math.sin(angle) * radius * 1.5
+            const bezierX = 250 + Math.cos(angle) * radius * bezierFactor
+            const bezierY = 250 + Math.sin(angle) * radius * bezierFactor
             // SIMPLE LINES: return collect + `${index === 0 ? "M" : "L"} ${x},${y}`
             const nextPoint =
               index < points.length - 1 ? points[index + 1] : points[0]
             const nextX = 250 + Math.cos(nextPoint.angle) * radius
             const nextY = 250 + Math.sin(nextPoint.angle) * radius
-            const nextBezierX = 250 + Math.cos(nextPoint.angle) * radius * 1.5
-            const nextBezierY = 250 + Math.sin(nextPoint.angle) * radius * 1.5
+            const nextBezierX =
+              250 + Math.cos(nextPoint.angle) * radius * bezierFactor
+            const nextBezierY =
+              250 + Math.sin(nextPoint.angle) * radius * bezierFactor
 
             // return `${collect  }${index === 0 ? "M" : "L"} ${x},${y}`
 
