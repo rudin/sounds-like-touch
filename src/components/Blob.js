@@ -24,28 +24,40 @@ export default ({
           fill="black"
           d={`${
             points.reduce((collect, { angle, radius }, index) => {
-              const bezierFactor = 1.5
+              const bezierFactor = 1.01
               const x = 250 + Math.cos(angle) * radius
               const y = 250 + Math.sin(angle) * radius
-              const bezierX = 250 + Math.cos(angle) * radius * bezierFactor
-              const bezierY = 250 + Math.sin(angle) * radius * bezierFactor
+              let bezierX = 250 + Math.cos(angle) * radius * bezierFactor
+              let bezierY = 250 + Math.sin(angle) * radius * bezierFactor
               // SIMPLE LINES: return collect + `${index === 0 ? "M" : "L"} ${x},${y}`
               const nextPoint =
                 index < points.length - 1 ? points[index + 1] : points[0]
               const nextX = 250 + Math.cos(nextPoint.angle) * radius
               const nextY = 250 + Math.sin(nextPoint.angle) * radius
-              const nextBezierX =
+              let nextBezierX =
                 250 + Math.cos(nextPoint.angle) * radius * bezierFactor
-              const nextBezierY =
+              let nextBezierY =
                 250 + Math.sin(nextPoint.angle) * radius * bezierFactor
 
+              bezierX =
+                250 +
+                Math.cos((angle + nextPoint.angle) / 2) * radius * bezierFactor
+              bezierY =
+                250 +
+                Math.sin((angle + nextPoint.angle) / 2) * radius * bezierFactor
+
+              nextBezierX = bezierX
+              nextBezierY = bezierY
               // return `${collect  }${index === 0 ? "M" : "L"} ${x},${y}`
 
               return `${collect}
-            ${index === 0 ? `M ${x},${y}` : `${x},${y}`}
-            C ${bezierX},${bezierY}
-              ${nextBezierX},${nextBezierY}
-              ${index === points.length - 1 ? `${nextX},${nextY}` : ``}`
+            ${
+              index === 0
+                ? `M ${x},${y}`
+                : `${x},${y}
+            `
+            }
+            T ${bezierX},${bezierY}`
             }, "")
             /* .map(({ angle, radius }, index) => {
               const x = 250 + Math.cos(angle) * radius
