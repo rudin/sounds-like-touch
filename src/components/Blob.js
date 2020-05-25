@@ -20,10 +20,7 @@ export default ({
       style={{ width: "100%", height: "30vw" }}
     >
       <path
-        fill="none"
-        stroke="black"
-        strokeWidth="6px"
-        vector-effect="non-scaling-stroke"
+        fill="black"
         d={
           points
             .map(({ angle, radius }, index) => {
