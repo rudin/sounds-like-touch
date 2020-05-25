@@ -11,7 +11,7 @@ const GradientBackground = () => (
       zIndex: 10,
       pointerEvents: "none",
       background:
-        "linear-gradient(180deg, rgba(85,115,108,1) 0%, rgba(65,65,201,1) 0%, rgba(0,212,255,1) 100%)",
+        "radial-gradient(at 50% 25%, rgba(61,226,169,1) 0%, rgba(133,113,86,1) 100%)",
       mixBlendMode: "lighten",
     }}
   />
