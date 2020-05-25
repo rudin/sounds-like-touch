@@ -9,6 +9,7 @@ import Oscillator from "./Oscillator"
 import BounceOscillatorVolume from "./BounceOscillatorVolume"
 import Home from "./Home"
 import GradientBackground from "./GradientBackground"
+import Blob from "./Blob"
 
 const segmentCount = 8
 // een cirkel, onderverdeeld in 8 hoeken / vlakken
@@ -65,7 +66,7 @@ const App = () => {
             marginRight: "auto",
           }}
         >
-          <svg
+          {/* <svg
             viewBox="0 0 200 200"
             preserveAspectRatio="xMidYMid meet"
             style={{ width: "50vw", height: "30vw" }}
@@ -76,7 +77,13 @@ const App = () => {
               strokeWidth="3px"
               d="  M 25,100 C 25,150 75,150 75,100 S 100,25 150,75  "
             />
-          </svg>
+          </svg> */}
+          <Blob
+            points={radiusSpring.map((value, index) => ({
+              radius: 165 + value * 80,
+              angle: calcAngle(index, segmentCount) + angleSpring[index] / 3,
+            }))}
+          />
           <Home />
           <div style={{ marginTop: 100 }}>Run a 'ticker' to animate on.</div>
           <div style={{ marginTop: 100 }} onClick={pause}>
@@ -133,6 +140,7 @@ const App = () => {
           </div>
           <ShiftWithSpring />
           <div style={{ height: 600 }}>
+            vcvc
             <DotsOnACircle
               points={radiusSpring.map((value, index) => ({
                 radius: 165 + value * 80,
