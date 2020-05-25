@@ -15,9 +15,9 @@ export default ({
 }) => {
   return (
     <svg
-      viewBox="0 0 500 500"
+      viewBox="0 0 550 550"
       preserveAspectRatio="xMidYMid meet"
-      style={{ width: "100%", height: "30vw" }}
+      style={{ width: "100%", height: "35vw" }}
     >
       <path
         fill="black"
@@ -36,8 +36,9 @@ export default ({
             const nextBezierY = 250 + Math.sin(nextPoint.angle) * radius * 1.1
 
             // return `${collect  }${index === 0 ? "M" : "L"} ${x},${y}`
+
             return `${collect}
-            M ${x},${y}
+            ${index === 0 ? "M" : "L"} ${x},${y}
             C ${bezierX},${bezierY}
               ${nextBezierX},${nextBezierY}
               ${nextX},${nextY}`

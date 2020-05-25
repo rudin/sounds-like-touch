@@ -70,7 +70,7 @@ const App = () => {
             marginRight: "auto",
           }}
         >
-          {/* <svg
+          <svg
             viewBox="0 0 200 200"
             preserveAspectRatio="xMidYMid meet"
             style={{ width: "50vw", height: "30vw" }}
@@ -81,7 +81,7 @@ const App = () => {
               strokeWidth="3px"
               d="  M 25,100 C 25,150 75,150 75,100 S 100,25 150,75  "
             />
-          </svg> */}
+          </svg>
           <div style={{ position: "relative" }}>
             <h1 style={{ textTransform: "uppercase", position: "absolute" }}>
               Sounds
