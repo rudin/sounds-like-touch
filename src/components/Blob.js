@@ -25,15 +25,15 @@ export default ({
           points.reduce((collect, { angle, radius }, index) => {
             const x = 250 + Math.cos(angle) * radius
             const y = 250 + Math.sin(angle) * radius
-            const bezierX = 250 + Math.cos(angle) * radius * 1.1
-            const bezierY = 250 + Math.sin(angle) * radius * 1.1
+            const bezierX = 250 + Math.cos(angle) * radius * 1.5
+            const bezierY = 250 + Math.sin(angle) * radius * 1.5
             // SIMPLE LINES: return collect + `${index === 0 ? "M" : "L"} ${x},${y}`
             const nextPoint =
               index < points.length - 1 ? points[index + 1] : points[0]
             const nextX = 250 + Math.cos(nextPoint.angle) * radius
             const nextY = 250 + Math.sin(nextPoint.angle) * radius
-            const nextBezierX = 250 + Math.cos(nextPoint.angle) * radius * 1.1
-            const nextBezierY = 250 + Math.sin(nextPoint.angle) * radius * 1.1
+            const nextBezierX = 250 + Math.cos(nextPoint.angle) * radius * 1.5
+            const nextBezierY = 250 + Math.sin(nextPoint.angle) * radius * 1.5
 
             // return `${collect  }${index === 0 ? "M" : "L"} ${x},${y}`
 

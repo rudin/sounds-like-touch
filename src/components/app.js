@@ -70,18 +70,6 @@ const App = () => {
             marginRight: "auto",
           }}
         >
-          <svg
-            viewBox="0 0 200 200"
-            preserveAspectRatio="xMidYMid meet"
-            style={{ width: "50vw", height: "30vw" }}
-          >
-            <path
-              fill="none"
-              stroke="black"
-              strokeWidth="3px"
-              d="  M 25,100 C 25,150 75,150 75,100 S 100,25 150,75  "
-            />
-          </svg>
           <div style={{ position: "relative" }}>
             <h1 style={{ textTransform: "uppercase", position: "absolute" }}>
               Sounds
@@ -111,7 +99,6 @@ const App = () => {
               }))}
             />
           </div>
-          <div onClick={toggle}>...process</div>
           {!process && <Home />}
           {process && (
             <Fragment>
@@ -202,6 +189,7 @@ const App = () => {
               <div style={{ height: 40 }} />
             </Fragment>
           )}
+          <div onClick={toggle}>...</div>
         </div>
       </div>
     </Fragment>

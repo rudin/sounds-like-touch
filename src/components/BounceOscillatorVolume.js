@@ -77,7 +77,7 @@ const Bounce = ({ tick }) => {
         }}
       />
       <Oscillator volume={animatedProps.shrink.value / 1.3} />
-      <Sawtooth volume={Math.abs(x) * -20 || -20000} />
+      <Sawtooth volume={Math.abs(x) * -5 || -20000} />
       {tick}
     </div>
   )
