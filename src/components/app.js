@@ -104,6 +104,7 @@ const App = () => {
                 radius: 165 + value * 80,
                 angle: calcAngle(index, segmentCount) + angleSpring[index] / 3,
               }))}
+              tick={tick}
             />
           </div>
           {!process && <Home />}

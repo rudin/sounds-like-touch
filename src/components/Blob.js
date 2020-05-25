@@ -1,6 +1,9 @@
 import { h } from "preact"
 import { useState, useEffect, useRef } from "preact/hooks"
 import { useMousePositionAsFactorFromCenter } from "./MousePosition"
+import { useBounce } from "./BounceOscillatorVolume"
+import Oscillator from "./Oscillator"
+import Sawtooth from "./Sawtooth"
 // every point consists of an object with the angle, radius
 // render as svg
 
@@ -12,6 +15,7 @@ export default ({
     radius: 200,
     angle: calcAngle(index, source.length),
   })),
+  tick,
 }) => {
   const [
     mouseX,
@@ -23,10 +27,17 @@ export default ({
     0, // leaveDelay
     30 // fps
   )
+
+  const [active, setActive] = useState(false)
+
+  const { shrink, animatedProps } = useBounce(mouseY)
+
   return (
     <div
       style={{ position: "absolute", left: 0, right: 0, top: 0, bottom: 0 }}
       ref={ref}
+      onMouseDown={() => setActive(true)}
+      onMouseUp={() => setActive(false)}
     >
       <svg
         viewBox="0 0 550 550"
@@ -37,11 +48,21 @@ export default ({
           fill="black"
           d={`${
             points.reduce((collect, { angle, radius }, index) => {
-              const bezierFactor = 0.7 - Math.abs(mouseX * 1.4 || 0)
+              const bezierFactor =
+                0.7 - (active ? Math.abs(mouseX * 1.4 || 0) : 0)
               const x = 250 + Math.cos(angle) * radius
-              const y = 250 + Math.sin(angle) * radius
+              const y =
+                250 +
+                Math.sin(angle) *
+                  radius *
+                  (!active ? 1 : animatedProps.shrink.value)
               const bezierX = 250 + Math.cos(angle) * radius * bezierFactor
-              const bezierY = 250 + Math.sin(angle) * radius * bezierFactor
+              const bezierY =
+                250 +
+                Math.sin(angle) *
+                  radius *
+                  bezierFactor *
+                  (!active ? 1 : animatedProps.shrink.value)
               // SIMPLE LINES: return collect + `${index === 0 ? "M" : "L"} ${x},${y}`
               const nextPoint =
                 index < points.length - 1 ? points[index + 1] : points[0]
@@ -68,6 +89,10 @@ export default ({
           } Z`}
         />
       </svg>
+      {active && (
+        <Oscillator volume={animatedProps.shrink.value / 1.3} autoPlay />
+      )}
+      {active && <Sawtooth volume={Math.abs(mouseX) * -5 || -20000} autoPlay />}
     </div>
   )
 }

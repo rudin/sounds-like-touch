@@ -1,12 +1,16 @@
 import { h } from "preact"
-import { useState, useEffect, useRef } from "preact/hooks"
+import { useState, useEffect, useLayoutEffect, useRef } from "preact/hooks"
 import Tone from "tone"
 import useToggle from "react-use-toggle"
 
-const Oscillator = ({ volume = 1 }) => {
+const Oscillator = ({ volume = 1, autoPlay }) => {
   const [play, toggle] = useToggle(false)
   const osc = useRef(new Tone.Oscillator(440, "square").toMaster())
   // const osc = useRef(new Tone.Synth().toMaster())
+  useEffect(() => {
+    if (autoPlay) toggle()
+    return () => osc.current.stop()
+  }, [])
   useEffect(() => {
     if (play) {
       osc.current.start()
@@ -25,7 +29,7 @@ const Oscillator = ({ volume = 1 }) => {
       // osc.current.setNote("C4")
     }
   }, [volume])
-  return <div onClick={toggle}>{play ? "Stop" : "Start"}</div>
+  return autoPlay ? null : <div onClick={toggle}>{play ? "Stop" : "Start"}</div>
 }
 
 export default Oscillator

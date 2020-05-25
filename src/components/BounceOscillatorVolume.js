@@ -6,14 +6,9 @@ import { useSpring } from "react-spring"
 import Oscillator from "./Oscillator"
 import Sawtooth from "./Sawtooth"
 
-const Bounce = ({ tick }) => {
+export const useBounce = (y) => {
   const timeout = useRef()
   const ms = useRef()
-  const [x, y, ref, mousePosition] = useMousePositionAsFactorFromCenter(
-    0, // enterDelay
-    0, // leaveDelay
-    10 // fps
-  )
 
   useEffect(() => {
     ms.current = y || y === 0 ? 200 + Math.abs(y * 500) : 1000
@@ -50,6 +45,17 @@ const Bounce = ({ tick }) => {
 
   useEffect(() => set({ shrink: shrink ? 0.5 : 1 }), [shrink])
 
+  return { shrink, animatedProps }
+}
+
+const Bounce = ({ tick }) => {
+  const [x, y, ref, mousePosition] = useMousePositionAsFactorFromCenter(
+    0, // enterDelay
+    0, // leaveDelay
+    10 // fps
+  )
+
+  const { shrink, animatedProps } = useBounce(y)
   return (
     <div
       ref={ref}
