@@ -106,8 +106,8 @@ const App = () => {
                 angle: calcAngle(index, segmentCount) + angleSpring[index] / 3,
               }))}
               tick={tick}
-              radiusMaxBezierOffset={60}
-              angleMaxBezierOffset={calcAngle(1, segmentCount)}
+              radiusMaxBezierOffset={-60}
+              angleMaxBezierOffset={calcAngle(1, segmentCount) / 5}
               segmentCount={segmentCount}
             />
           </div>
