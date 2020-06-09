@@ -107,7 +107,7 @@ const App = () => {
               }))}
               tick={tick}
               radiusMaxBezierOffset={-60}
-              angleMaxBezierOffset={calcAngle(1, segmentCount) / 5}
+              angleMaxBezierOffset={calcAngle(1, segmentCount) / 2.5}
               segmentCount={segmentCount}
             />
           </div>

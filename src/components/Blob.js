@@ -54,10 +54,6 @@ export default ({
   const angleOffset = Math.max(0, (1 - spikey) * angleMaxBezierOffset)
   return (
     <Fragment>
-      <div>{mouseX}</div>
-      <div>Spikey: {Math.abs(mouseY * 2)}</div>
-      <div>radiusOffset: {radiusOffset}</div>
-      <div>angleOffset: {angleOffset}</div>
       <div
         id="blob"
         style={{ position: "absolute", left: 0, right: 0, top: 0, bottom: 0 }}
@@ -77,8 +73,6 @@ export default ({
             stroke="red"
             d={`${
               points.reduce((collect, { angle, radius }, index) => {
-                const bezierFactor =
-                  0.7 - (active ? Math.abs(mouseX * 1.4 || 0) : 0)
                 const x = 250 + Math.cos(angle) * radius
                 const y =
                   250 +
@@ -86,23 +80,25 @@ export default ({
                     radius *
                     (!active ? 1 : animatedProps.shrink.value)
                 const bezierX =
-                  250 + Math.cos(angle + angleOffset) * (radius + radiusOffset)
+                  250 +
+                  Math.cos(angle + angleOffset) * (radius * 1.05 + radiusOffset)
                 const bezierY =
-                  250 + Math.sin(angle + angleOffset) * (radius + radiusOffset)
+                  250 +
+                  Math.sin(angle + angleOffset) * (radius * 1.05 + radiusOffset)
                 //  * (!active ? 1 : animatedProps.shrink.value)
                 // SIMPLE LINES: return collect + `${index === 0 ? "M" : "L"} ${x},${y}`
                 const nextPoint =
                   index < points.length - 1 ? points[index + 1] : points[0]
-                const nextX = 250 + Math.cos(nextPoint.angle) * radius
-                const nextY = 250 + Math.sin(nextPoint.angle) * radius
+                const nextX = 250 + Math.cos(nextPoint.angle) * nextPoint.radius
+                const nextY = 250 + Math.sin(nextPoint.angle) * nextPoint.radius
                 const nextBezierX =
                   250 +
                   Math.cos(nextPoint.angle - angleOffset) *
-                    (radius + radiusOffset)
+                    (nextPoint.radius * 1.05 + radiusOffset)
                 const nextBezierY =
                   250 +
                   Math.sin(nextPoint.angle - angleOffset) *
-                    (radius + radiusOffset)
+                    (nextPoint.radius * 1.05 + radiusOffset)
 
                 // return `${collect  }${index === 0 ? "M" : "L"} ${x},${y}`
 
@@ -110,20 +106,19 @@ export default ({
             ${
               index === 0
                 ? `M ${x},${y}
-            L ${bezierX},${bezierY}
-             L ${nextBezierX},${nextBezierY}
-             L ${nextX},${nextY}
+            C ${bezierX},${bezierY}
+              ${nextBezierX},${nextBezierY}
+              ${nextX},${nextY}
             
             
             
             `
                 : `
      
-
                 L ${x},${y}
-            L ${bezierX},${bezierY}
-             L ${nextBezierX},${nextBezierY}
-             L ${nextX},${nextY}
+                C ${bezierX},${bezierY}
+                  ${nextBezierX},${nextBezierY}
+                  ${nextX},${nextY}
 
                 `
             }
