@@ -10,6 +10,7 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from "body-scroll-lock"
+import { useSpring } from "react-spring"
 // every point consists of an object with the angle, radius
 // render as svg
 
@@ -25,6 +26,16 @@ export default ({
   radiusMaxBezierOffset,
   angleMaxBezierOffset,
 }) => {
+  /*
+    various factors:
+    hover: upscale
+    active: blobbing - modulate the max angle/radius to near-zero
+    bounce: the amount of y-scale-bouncing
+    scaleY: always schrink the whole on the y-axis
+  */
+
+  const scaleY = 0.8
+
   const [
     mouseX,
     mouseY,
@@ -35,6 +46,22 @@ export default ({
     0, // leaveDelay
     30 // fps
   )
+
+  const [hover, setHover] = useState(false)
+
+  const [animatedPropsLocal, set] = useSpring(() => {
+    return {
+      // Array containing [rotateX, rotateY, and scale] values.
+      // We store under a single key (xys) instead of separate keys ...
+      // ... so that we can use animatedProps.xys.interpolate() to ...
+      // ... easily generate the css transform value below.
+      upscale: 1,
+      // Setup physics
+      config: { mass: 3, tension: 500, friction: 30, precision: 0.00001 },
+    }
+  })
+
+  useEffect(() => set({ upscale: hover ? 1 : 0.8 }), [hover])
 
   const [active, setActive] = useState(false)
 
@@ -49,56 +76,92 @@ export default ({
   const { shrink, animatedProps } = useBounce(mouseY)
   console.log(mouseX, (0.5 - Math.abs(mouseX)) * 200)
   // make spikey also into a spring?! eigenlijk wel he?! later..
-  const spikey = Math.abs(mouseY * 2) || 0 // 1 = full, 0 = none: blobby
+  const bounce = active ? 1 - animatedProps.shrink.value * Math.abs(mouseX) : 1
+  const spikey = active ? Math.abs(mouseY * 2) : 0 // 1 = full, 0 = none: blobby
   const radiusOffset = spikey * radiusMaxBezierOffset
   const angleOffset = Math.max(0, (1 - spikey) * angleMaxBezierOffset)
   return (
     <Fragment>
       <div
         id="blob"
-        style={{ position: "absolute", left: 0, right: 0, top: 0, bottom: 0 }}
-        ref={ref}
+        style={{
+          position: "absolute",
+          left: "-7vw",
+          right: "-7vw",
+          top: 0,
+          bottom: 0,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
         onMouseDown={() => setActive(true)}
         onMouseUp={() => setActive(false)}
         onTouchStart={() => setActive(true)}
         onTouchEnd={() => setActive(false)}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
       >
+        <div
+          ref={ref}
+          style={{
+            position: "absolute",
+            zIndex: 90,
+            left: "5vw",
+            right: "5vw",
+            top: "4vw",
+            bottom: "4vw",
+            opacity: 0,
+          }}
+        >
+          mouseX: {mouseX}
+          <br />
+          mouseY: {mouseY}
+          <br />
+          upscale: {animatedPropsLocal.upscale.value}
+          <br />
+          bounce: {bounce}
+        </div>
         <svg
           viewBox="0 0 500 500"
           preserveAspectRatio="xMidYMid meet"
-          style={{ position: "absolute", left: 0, right: 0, top: 0, bottom: 0 }}
+          style={{ width: "100%" }}
         >
           <path
             fill="black"
-            stroke="red"
             d={`${
-              points.reduce((collect, { angle, radius }, index) => {
+              points.reduce((collect, { angle, radius: initRadius }, index) => {
+                const radius = initRadius * animatedPropsLocal.upscale.value
                 const x = 250 + Math.cos(angle) * radius
-                const y =
-                  250 +
-                  Math.sin(angle) *
-                    radius *
-                    (!active ? 1 : animatedProps.shrink.value)
+                const y = 250 + Math.sin(angle) * radius * bounce * scaleY
                 const bezierX =
                   250 +
                   Math.cos(angle + angleOffset) * (radius * 1.05 + radiusOffset)
                 const bezierY =
                   250 +
-                  Math.sin(angle + angleOffset) * (radius * 1.05 + radiusOffset)
-                //  * (!active ? 1 : animatedProps.shrink.value)
+                  Math.sin(angle + angleOffset) *
+                    (radius * 1.05 + radiusOffset) *
+                    bounce *
+                    scaleY
+                //  * (!active ? 1 : bounce)
                 // SIMPLE LINES: return collect + `${index === 0 ? "M" : "L"} ${x},${y}`
                 const nextPoint =
                   index < points.length - 1 ? points[index + 1] : points[0]
-                const nextX = 250 + Math.cos(nextPoint.angle) * nextPoint.radius
-                const nextY = 250 + Math.sin(nextPoint.angle) * nextPoint.radius
+                const nextPointRadius =
+                  nextPoint.radius * animatedPropsLocal.upscale.value
+                const nextX = 250 + Math.cos(nextPoint.angle) * nextPointRadius
+                const nextY =
+                  250 +
+                  Math.sin(nextPoint.angle) * nextPointRadius * bounce * scaleY
                 const nextBezierX =
                   250 +
                   Math.cos(nextPoint.angle - angleOffset) *
-                    (nextPoint.radius * 1.05 + radiusOffset)
+                    (nextPointRadius * 1.05 + radiusOffset)
                 const nextBezierY =
                   250 +
                   Math.sin(nextPoint.angle - angleOffset) *
-                    (nextPoint.radius * 1.05 + radiusOffset)
+                    (nextPointRadius * 1.05 + radiusOffset) *
+                    bounce *
+                    scaleY
 
                 // return `${collect  }${index === 0 ? "M" : "L"} ${x},${y}`
 
@@ -132,9 +195,7 @@ export default ({
             } Z`}
           />
         </svg>
-        {active && (
-          <Oscillator volume={animatedProps.shrink.value / 1.3} autoPlay />
-        )}
+        {active && <Oscillator volume={bounce / 1.3} autoPlay />}
         {active && (
           <Sawtooth volume={Math.abs(mouseX) * -5 || -20000} autoPlay />
         )}

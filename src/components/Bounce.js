@@ -14,8 +14,8 @@ const Bounce = () => {
   )
 
   useEffect(() => {
-    ms.current = y || y === 0 ? 200 + Math.abs(y * 500) : 1000
-  }, [y])
+    ms.current = x || x === 0 ? 200 + Math.abs(x * 500) : 1000
+  }, [x])
 
   const [shrink, toggle] = useToggle(false)
 
