@@ -75,7 +75,7 @@ const App = () => {
             style={{
               position: "relative",
               height: 0,
-              paddingBottom: "85%",
+              paddingBottom: "90%",
               overflowY: "visible",
             }}
           >
@@ -102,8 +102,8 @@ const App = () => {
             </h1>
             <Blob
               points={radiusSpring.map((value, index) => ({
-                radius: 165 + value * 80,
-                angle: calcAngle(index, segmentCount) + angleSpring[index] / 3,
+                radius: 150 + value * 20,
+                angle: calcAngle(index, segmentCount) + angleSpring[index] / 6,
               }))}
               tick={tick}
               radiusMaxBezierOffset={-60}

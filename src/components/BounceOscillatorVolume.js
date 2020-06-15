@@ -11,7 +11,7 @@ export const useBounce = (y) => {
   const ms = useRef()
 
   useEffect(() => {
-    ms.current = y || y === 0 ? 200 + Math.abs(y * 500) : 1000
+    ms.current = y || y === 0 ? 150 + Math.abs(y * 500) : 1000
   }, [y])
 
   const [shrink, toggle] = useToggle(false)
@@ -39,7 +39,7 @@ export const useBounce = (y) => {
       // ... easily generate the css transform value below.
       shrink: 1,
       // Setup physics
-      config: { mass: 3, tension: 500, friction: 30, precision: 0.00001 },
+      config: { mass: 3, tension: 900, friction: 20, precision: 0.00001 },
     }
   })
 

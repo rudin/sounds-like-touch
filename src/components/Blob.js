@@ -34,7 +34,7 @@ export default ({
     scaleY: always schrink the whole on the y-axis
   */
 
-  const scaleY = 0.8
+  const scaleY = 0.84
 
   const [
     mouseX,
@@ -49,23 +49,6 @@ export default ({
 
   const [hover, setHover] = useState(false)
 
-  const [animatedPropsLocal, set] = useSpring(() => {
-    return {
-      // Array containing [rotateX, rotateY, and scale] values.
-      // We store under a single key (xys) instead of separate keys ...
-      // ... so that we can use animatedProps.xys.interpolate() to ...
-      // ... easily generate the css transform value below.
-      upscale: 1,
-      // Setup physics
-      config: { mass: 3, tension: 500, friction: 30, precision: 0.00001 },
-    }
-  })
-
-  useEffect(() => {
-    set({ upscale: hover ? 1 : 0.9 })
-    setTimeout(() => set({ upscale: 0.9 }), 300)
-  }, [hover])
-
   const [active, setActive] = useState(false)
 
   useEffect(() => {
@@ -79,18 +62,51 @@ export default ({
   const { shrink, animatedProps } = useBounce(mouseY)
   console.log(mouseX, (0.5 - Math.abs(mouseX)) * 200)
   // make spikey also into a spring?! eigenlijk wel he?! later..
-  const bounce = active ? 1 - animatedProps.shrink.value * Math.abs(mouseX) : 1
-  const spikey = active ? Math.abs(mouseY * 2) : 0 // 1 = full, 0 = none: blobby
+
+  const [animatedPropsLocal, set] = useSpring(() => {
+    return {
+      // Array containing [rotateX, rotateY, and scale] values.
+      // We store under a single key (xys) instead of separate keys ...
+      // ... so that we can use animatedProps.xys.interpolate() to ...
+      // ... easily generate the css transform value below.
+      upscale: 1,
+      mouseX: 0,
+      mouseY: 0,
+      // Setup physics
+      config: { mass: 3, tension: 500, friction: 30, precision: 0.00001 },
+    }
+  })
+
+  useEffect(() => {
+    set({ upscale: hover ? 1 : 0.9 })
+    setTimeout(() => set({ upscale: 0.9 }), 300)
+  }, [hover])
+
+  useEffect(() => {
+    set({ mouseY: active ? mouseY : 0 })
+  }, [mouseY, active])
+
+  useEffect(() => {
+    set({ mouseX: active ? mouseX : 0 })
+  }, [mouseX, active])
+
+  const newX = animatedPropsLocal.mouseX.value
+  const newY = animatedPropsLocal.mouseY.value
+
+  const bounce = 1 - animatedProps.shrink.value * Math.abs(newX)
+  const spikey = Math.abs(newY * 2) // 1 = full, 0 = none: blobby
   const radiusOffset = spikey * radiusMaxBezierOffset
   const angleOffset = Math.max(0, (1 - spikey) * angleMaxBezierOffset)
+
+  const totalUpscale = animatedPropsLocal.upscale.value * (1 + spikey / 4)
   return (
     <Fragment>
       <div
         id="blob"
         style={{
           position: "absolute",
-          left: "-7vw",
-          right: "-7vw",
+          left: "-30%",
+          right: "-30%",
           top: 0,
           bottom: 0,
           display: "flex",
@@ -103,10 +119,10 @@ export default ({
           style={{
             position: "absolute",
             zIndex: 90,
-            left: "5%",
-            right: "5%",
-            top: "4%",
-            bottom: "4%",
+            left: "8%",
+            right: "8%",
+            top: "6%",
+            bottom: "6%",
             opacity: 1,
             transform: "translate3D(0,0,0)",
           }}
@@ -117,6 +133,18 @@ export default ({
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
         >
+          mouseY: {mouseY}
+          <div
+            style={{ width: mouseY * 100, height: 20, background: "black" }}
+          />
+          newY: {animatedPropsLocal.mouseY.value}
+          <div
+            style={{
+              width: animatedPropsLocal.mouseY.value * 100,
+              height: 20,
+              background: "black",
+            }}
+          />
           {/*
           mouseX: {mouseX}
           <br />
@@ -136,7 +164,7 @@ export default ({
             fill="black"
             d={`${
               points.reduce((collect, { angle, radius: initRadius }, index) => {
-                const radius = initRadius * animatedPropsLocal.upscale.value
+                const radius = initRadius * totalUpscale
                 const x = 250 + Math.cos(angle) * radius
                 const y = 250 + Math.sin(angle) * radius * bounce * scaleY
                 const bezierX =
@@ -152,8 +180,7 @@ export default ({
                 // SIMPLE LINES: return collect + `${index === 0 ? "M" : "L"} ${x},${y}`
                 const nextPoint =
                   index < points.length - 1 ? points[index + 1] : points[0]
-                const nextPointRadius =
-                  nextPoint.radius * animatedPropsLocal.upscale.value
+                const nextPointRadius = nextPoint.radius * totalUpscale
                 const nextX = 250 + Math.cos(nextPoint.angle) * nextPointRadius
                 const nextY =
                   250 +
@@ -205,7 +232,7 @@ export default ({
         {active && (
           <Sawtooth volume={(0.5 - Math.abs(mouseY)) * -2 || -20000} autoPlay />
         )}
-        {active && (
+        {active && 1 === 7 && (
           <Sound
             url="assets/guitar-loop.mp3"
             loop={true}
