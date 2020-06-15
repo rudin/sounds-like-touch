@@ -29,12 +29,7 @@ export const useMousePositionAsFactorFromCenter = () => {
 
   console.log({ animatedProps })
 
-  return [
-    animatedProps.x?.value ?? null,
-    animatedProps.y?.value ?? null,
-    ref,
-    mousePosition,
-  ]
+  return [animatedProps.x.value, animatedProps.y.value, ref, mousePosition]
 }
 
 const MousePosition = () => {

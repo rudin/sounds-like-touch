@@ -61,7 +61,10 @@ export default ({
     }
   })
 
-  useEffect(() => set({ upscale: hover ? 1 : 0.8 }), [hover])
+  useEffect(() => {
+    set({ upscale: hover ? 1 : 0.9 })
+    setTimeout(() => set({ upscale: 0.9 }), 300)
+  }, [hover])
 
   const [active, setActive] = useState(false)
 
@@ -94,25 +97,27 @@ export default ({
           justifyContent: "center",
           alignItems: "center",
         }}
-        onMouseDown={() => setActive(true)}
-        onMouseUp={() => setActive(false)}
-        onTouchStart={() => setActive(true)}
-        onTouchEnd={() => setActive(false)}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
       >
         <div
           ref={ref}
           style={{
             position: "absolute",
             zIndex: 90,
-            left: "5vw",
-            right: "5vw",
-            top: "4vw",
-            bottom: "4vw",
-            opacity: 0,
+            left: "5%",
+            right: "5%",
+            top: "4%",
+            bottom: "4%",
+            opacity: 1,
+            transform: "translate3D(0,0,0)",
           }}
+          onMouseDown={() => setActive(true)}
+          onMouseUp={() => setActive(false)}
+          onTouchStart={() => setActive(true)}
+          onTouchEnd={() => setActive(false)}
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
         >
+          {/*
           mouseX: {mouseX}
           <br />
           mouseY: {mouseY}
@@ -120,6 +125,7 @@ export default ({
           upscale: {animatedPropsLocal.upscale.value}
           <br />
           bounce: {bounce}
+        */}
         </div>
         <svg
           viewBox="0 0 500 500"
