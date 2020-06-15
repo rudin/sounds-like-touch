@@ -203,7 +203,7 @@ export default ({
         </svg>
         {active && <Oscillator volume={bounce / 1.3} autoPlay />}
         {active && (
-          <Sawtooth volume={(0.5 - Math.abs(mouseY)) * -5 || -20000} autoPlay />
+          <Sawtooth volume={(0.5 - Math.abs(mouseY)) * -2 || -20000} autoPlay />
         )}
         {active && (
           <Sound
