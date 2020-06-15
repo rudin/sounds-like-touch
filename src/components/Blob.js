@@ -133,6 +133,7 @@ export default ({
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
         >
+          {/*
           mouseY: {mouseY}
           <div
             style={{ width: mouseY * 100, height: 20, background: "black" }}
@@ -145,7 +146,7 @@ export default ({
               background: "black",
             }}
           />
-          {/*
+
           mouseX: {mouseX}
           <br />
           mouseY: {mouseY}
