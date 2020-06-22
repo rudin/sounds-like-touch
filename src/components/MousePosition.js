@@ -4,6 +4,7 @@ import useMousePosition from "@react-hook/mouse-position"
 import { useSpring } from "react-spring"
 
 export const useMousePositionAsFactorFromCenter = () => {
+  /*
   const [animatedProps, set] = useSpring(() => {
     return {
       // Array containing [rotateX, rotateY, and scale] values.
@@ -16,6 +17,7 @@ export const useMousePositionAsFactorFromCenter = () => {
       config: { mass: 3, tension: 500, friction: 30, precision: 0.00001 },
     }
   })
+  */
 
   const [mousePosition, ref] = useMousePosition(
     0, // enterDelay
@@ -25,11 +27,10 @@ export const useMousePositionAsFactorFromCenter = () => {
   const x = mousePosition && mousePosition.x / mousePosition.elementWidth - 0.5
   const y = mousePosition && mousePosition.y / mousePosition.elementHeight - 0.5
 
-  useEffect(() => set({ x: x || 0, y: y || 0 }), [x, y, set])
+  // useEffect(() => set({ x: x || 0, y: y || 0 }), [x, y, set])
+  // console.log({ animatedProps })
 
-  console.log({ animatedProps })
-
-  return [animatedProps.x.value, animatedProps.y.value, ref, mousePosition]
+  return [x || 0, y || 0, ref, mousePosition]
 }
 
 const MousePosition = () => {

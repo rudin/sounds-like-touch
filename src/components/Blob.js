@@ -59,8 +59,7 @@ export default ({
     }
   }, [active])
 
-  const { shrink, animatedProps } = useBounce(mouseY)
-  console.log(mouseX, (0.5 - Math.abs(mouseX)) * 200)
+  const { shrink, animatedProps } = useBounce(mouseX)
   // make spikey also into a spring?! eigenlijk wel he?! later..
 
   const [animatedPropsLocal, set] = useSpring(() => {
@@ -113,6 +112,7 @@ export default ({
           justifyContent: "center",
           alignItems: "center",
         }}
+        onMouseUp={() => setActive(false)}
       >
         <div
           ref={ref}
@@ -131,7 +131,9 @@ export default ({
           onTouchStart={() => setActive(true)}
           onTouchEnd={() => setActive(false)}
           onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
+          onMouseLeave={() => {
+            setHover(false)
+          }}
         >
           {/*
           mouseY: {mouseY}
@@ -229,9 +231,25 @@ export default ({
             } Z`}
           />
         </svg>
-        {active && <Oscillator volume={bounce / 1.3} autoPlay />}
-        {active && (
+        {/* active && <Oscillator volume={bounce / 1.3} autoPlay /> */}
+        {/* active && (
           <Sawtooth volume={(0.5 - Math.abs(mouseY)) * -2 || -20000} autoPlay />
+        )*/}
+        {active && (
+          <Sound
+            url="assets/sound/default.mp3"
+            loop={true}
+            playStatus={Sound.status.PLAYING}
+            volume={Math.max(0, (0.5 - Math.abs(mouseX)) * 200 * bounce) || 0}
+          />
+        )}
+        {active && (
+          <Sound
+            url="assets/sound/spikey.mp3"
+            loop={true}
+            playStatus={Sound.status.PLAYING}
+            volume={Math.max(0, (0.5 - Math.abs(mouseX)) * 200 * spikey) || 0}
+          />
         )}
         {active && 1 === 7 && (
           <Sound
