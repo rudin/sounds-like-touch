@@ -39,7 +39,7 @@ export const useBounce = (y) => {
       // ... easily generate the css transform value below.
       shrink: 1,
       // Setup physics
-      config: { mass: 1, tension: 900, friction: 10, precision: 0.00001 },
+      config: { mass: 1, tension: 900, friction: 10, precision: 0.001 },
     }
   })
 
