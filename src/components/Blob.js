@@ -12,6 +12,7 @@ import {
   clearAllBodyScrollLocks,
 } from "body-scroll-lock"
 import { useSpring } from "react-spring"
+
 // every point consists of an object with the angle, radius
 // render as svg
 
@@ -99,7 +100,7 @@ export default ({
   const angleOffset = Math.max(0, Math.min((1 - spikey) * angleMaxBezierOffset))
 
   const totalUpscale = animatedPropsLocal.upscale.value * (1 + spikey / 4)
-  console.log("VOLUME", Math.max(0, (0.5 - Math.abs(mouseX)) * 2 * bounce) || 0)
+
   useAudio(
     "assets/sound/default.mp3",
     active,

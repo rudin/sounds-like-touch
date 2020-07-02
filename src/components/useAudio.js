@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react"
+import { useThrottle } from "use-throttle"
 
 const useAudio = (
   url = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/Yodel_Sound_Effect.mp3",
@@ -13,11 +14,6 @@ const useAudio = (
   const audioBufferRef = useRef(null)
 
   const gainNodeRef = useRef()
-
-  function randomGain() {
-    gainNodeRef.current.gain.value = Math.random()
-    console.log("yeh")
-  }
 
   useEffect(() => {
     console.log("Setup Audio!")
@@ -35,12 +31,10 @@ const useAudio = (
   useEffect(() => {
     if (active === true) {
       if (isFirstRun.current === false) {
-        console.log("NOTTHE FIRST RUN!")
         return
       }
       isFirstRun.current = false
       const gainNode = gainNodeRef.current
-      console.log("ACTIVE!")
       const source = context.createBufferSource()
       source.buffer = audioBufferRef.current
       // source.connect(context.destination);
@@ -56,9 +50,11 @@ const useAudio = (
     }
   }, [active, audioBufferRef, context])
 
+  const throttledVolume = useThrottle(volume, 74)
+
   useEffect(() => {
-    gainNodeRef.current.gain.value = volume
-  }, [volume])
+    gainNodeRef.current.gain.value = throttledVolume
+  }, [throttledVolume])
 }
 
 export default useAudio
