@@ -5,6 +5,7 @@ import { useBounce } from "./BounceOscillatorVolume"
 import Oscillator from "./Oscillator"
 import Sawtooth from "./Sawtooth"
 import Sound from "react-sound"
+import useAudio from "./useAudio"
 import {
   disableBodyScroll,
   enableBodyScroll,
@@ -95,9 +96,26 @@ export default ({
   const bounce = 1 - animatedProps.shrink.value * Math.abs(newX)
   const spikey = Math.abs(newY * 2) // 1 = full, 0 = none: blobby
   const radiusOffset = spikey * radiusMaxBezierOffset
-  const angleOffset = Math.max(0, (1 - spikey) * angleMaxBezierOffset)
+  const angleOffset = Math.max(0, Math.min((1 - spikey) * angleMaxBezierOffset))
 
   const totalUpscale = animatedPropsLocal.upscale.value * (1 + spikey / 4)
+  console.log("VOLUME", Math.max(0, (0.5 - Math.abs(mouseX)) * 2 * bounce) || 0)
+  useAudio(
+    "assets/sound/default.mp3",
+    active,
+    active
+      ? Math.max(0, Math.min((0.5 - Math.abs(mouseX)) * 2 * bounce, 1)) || 0
+      : 0
+  )
+
+  useAudio(
+    "assets/sound/spikey.mp3",
+    active,
+    active
+      ? Math.max(0, Math.min((0.5 - Math.abs(mouseX)) * 2 * spikey, 1)) || 0
+      : 0
+  )
+
   return (
     <Fragment>
       <div
@@ -235,6 +253,13 @@ export default ({
         {/* active && (
           <Sawtooth volume={(0.5 - Math.abs(mouseY)) * -2 || -20000} autoPlay />
         )*/}
+      </div>
+    </Fragment>
+  )
+}
+
+/*
+
         {active && (
           <Sound
             url="assets/sound/default.mp3"
@@ -259,7 +284,4 @@ export default ({
             volume={Math.max(0, (0.5 - Math.abs(mouseX)) * 200) || 0}
           />
         )}
-      </div>
-    </Fragment>
-  )
-}
+        */
