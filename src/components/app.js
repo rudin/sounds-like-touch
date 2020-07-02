@@ -10,6 +10,10 @@ import Bounce from "./Bounce"
 import Oscillator from "./Oscillator"
 import BounceOscillatorVolume from "./BounceOscillatorVolume"
 */
+
+import { useShift } from "./ShiftRadiusAndAngle"
+import { useShift as useSpringShift } from "./ShiftWithSpring"
+
 import Home from "./Home"
 import GradientBackground from "./GradientBackground"
 import Blob from "./Blob"
@@ -51,11 +55,11 @@ const App = () => {
   const pause = () => setRunning((running) => !running)
   const radiusShiftArray = useShift({ count: segmentCount, tick })
   const angleShiftArray = useShift({ count: segmentCount, tick })
+  */
 
   const radiusSpring = useSpringShift({ count: segmentCount, tick })
   const angleSpring = useSpringShift({ count: segmentCount, tick })
   // return <BounceOscillatorVolume />
-  */
 
   return (
     <Fragment>
