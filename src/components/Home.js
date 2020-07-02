@@ -4,7 +4,7 @@ const Home = () => (
   <div style={{ background: "#FFF" }}>
     <section>
       <p>
-        {`Sounds Like Touch aims to develop and encourage a for both performer and audience tangible and accessible practice of creating and performing electronic and electroacoustic music.`}
+        {`Sounds Like Touch aims to develop and encourage a tangible and accessible practice of creating and performing electronic and electroacoustic music for both performer and audience.`}
       </p>
       <p>
         {`Sounds Like Touch enables the evolution of new methods, means, technologies and products for making electronic-and electroacoustic music.`}
