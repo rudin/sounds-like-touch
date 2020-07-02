@@ -1,6 +1,7 @@
 import { h, Fragment } from "preact"
 import { useState, useEffect, useRef } from "preact/hooks"
 import useToggle from "react-use-toggle"
+/*
 import DotsOnACircle from "./DotsOnACircle"
 import ShiftRadiusAndAngle, { useShift } from "./ShiftRadiusAndAngle"
 import ShiftWithSpring, { useShift as useSpringShift } from "./ShiftWithSpring"
@@ -8,6 +9,7 @@ import MousePosition from "./MousePosition"
 import Bounce from "./Bounce"
 import Oscillator from "./Oscillator"
 import BounceOscillatorVolume from "./BounceOscillatorVolume"
+*/
 import Home from "./Home"
 import GradientBackground from "./GradientBackground"
 import Blob from "./Blob"
@@ -112,7 +114,7 @@ const App = () => {
             />
           </div>
           {!process && <Home />}
-          {process && (
+          {/* process && (
             <Fragment>
               <div style={{ marginTop: 100 }}>
                 Run a 'ticker' to animate on.
@@ -200,7 +202,7 @@ const App = () => {
               <BounceOscillatorVolume tick={tick} />
               <div style={{ height: 40 }} />
             </Fragment>
-          )}
+                )*/}
           <div onClick={toggle}>...</div>
         </div>
       </div>
