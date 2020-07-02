@@ -46,6 +46,8 @@ const App = () => {
       window.cancelAnimationFrame(requestRef.current)
     }
   }, [running])
+
+  /*
   const pause = () => setRunning((running) => !running)
   const radiusShiftArray = useShift({ count: segmentCount, tick })
   const angleShiftArray = useShift({ count: segmentCount, tick })
@@ -53,6 +55,7 @@ const App = () => {
   const radiusSpring = useSpringShift({ count: segmentCount, tick })
   const angleSpring = useSpringShift({ count: segmentCount, tick })
   // return <BounceOscillatorVolume />
+  */
 
   return (
     <Fragment>
