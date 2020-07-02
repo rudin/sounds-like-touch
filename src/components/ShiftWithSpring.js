@@ -23,7 +23,7 @@ export const useShift = ({ count = 8, tick = 0 }) => {
       // ... easily generate the css transform value below.
       shift: fill(count),
       // Setup physics
-      config: { mass: 10, tension: 400, friction: 40, precision: 0.001 },
+      config: { mass: 10, tension: 400, friction: 40, precision: 0.01 },
     }
   })
 

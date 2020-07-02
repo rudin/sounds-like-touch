@@ -74,7 +74,7 @@ export default ({
       mouseX: 0,
       mouseY: 0,
       // Setup physics
-      config: { mass: 3, tension: 500, friction: 30, precision: 0.001 },
+      config: { mass: 3, tension: 500, friction: 30, precision: 0.01 },
     }
   })
 
