@@ -8,7 +8,9 @@ const useAudio = (
 ) => {
   const isFirstRun = useRef(true)
 
-  const contextRef = useRef(new AudioContext())
+  const contextRef = useRef(
+    new (window.AudioContext || window.webkitAudioContext)()
+  )
   let context = contextRef.current
 
   const audioBufferRef = useRef(null)
