@@ -1,11 +1,7 @@
 import React, { useRef, useEffect, useState } from "react"
 import { useThrottle } from "use-throttle"
 
-const useAudio = (
-  url = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/Yodel_Sound_Effect.mp3",
-  active,
-  volume
-) => {
+const useAudio = (url, active, volume) => {
   const isFirstRun = useRef(true)
 
   const contextRef = useRef(
