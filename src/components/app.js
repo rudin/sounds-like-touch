@@ -1,6 +1,7 @@
 import { h, Fragment } from "preact"
 import { useState, useEffect, useRef } from "preact/hooks"
 import useToggle from "react-use-toggle"
+import useWindowFocus from "use-window-focus"
 /*
 import DotsOnACircle from "./DotsOnACircle"
 import ShiftRadiusAndAngle, { useShift } from "./ShiftRadiusAndAngle"
@@ -24,6 +25,7 @@ const segmentCount = 8
 const calcAngle = (index, count) => ((Math.PI * 2) / count) * index
 
 const App = () => {
+  const windowFocused = useWindowFocus()
   const [process, toggle] = useToggle(false)
 
   const requestRef = useRef(0)
@@ -109,16 +111,19 @@ const App = () => {
             >
               Touch
             </h1>
-            <Blob
-              points={radiusSpring.map((value, index) => ({
-                radius: 150 + value * 20,
-                angle: calcAngle(index, segmentCount) + angleSpring[index] / 6,
-              }))}
-              tick={tick}
-              radiusMaxBezierOffset={-60}
-              angleMaxBezierOffset={calcAngle(1, segmentCount) / 2.5}
-              segmentCount={segmentCount}
-            />
+            {windowFocused && (
+              <Blob
+                points={radiusSpring.map((value, index) => ({
+                  radius: 150 + value * 20,
+                  angle:
+                    calcAngle(index, segmentCount) + angleSpring[index] / 6,
+                }))}
+                tick={tick}
+                radiusMaxBezierOffset={-60}
+                angleMaxBezierOffset={calcAngle(1, segmentCount) / 2.5}
+                segmentCount={segmentCount}
+              />
+            )}
           </div>
           {!process && <Home />}
           {/* process && (

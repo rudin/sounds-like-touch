@@ -24,6 +24,9 @@ const useAudio = (url, active, volume) => {
       .then((audioBuffer) => {
         audioBufferRef.current = audioBuffer
       })
+    return () => {
+      context.close()
+    }
   }, [context, url])
 
   useEffect(() => {

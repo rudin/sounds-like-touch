@@ -40,7 +40,8 @@
     "react-use-toggle": "^0.1.0",
     "tone": "^13.8.25",
     "use-debounce": "^3.4.2",
-    "use-throttle": "^0.0.3"
+    "use-throttle": "^0.0.3",
+    "use-window-focus": "^1.0.0"
   },
   "jest": {
     "preset": "jest-preset-preact",
