@@ -21,3 +21,16 @@ h1 {
 * {
   box-sizing: border-box;
 }
+
+@keyframes fadein {
+  from {
+    color: white;
+  }
+  to {
+    color: black;
+  }
+}
+
+#blob {
+  animation: fadein 500ms;
+}

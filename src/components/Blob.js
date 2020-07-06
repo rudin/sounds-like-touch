@@ -183,7 +183,7 @@ export default ({
           style={{ width: "100%" }}
         >
           <path
-            fill="black"
+            fill="currentColor"
             d={`${
               points.reduce((collect, { angle, radius: initRadius }, index) => {
                 const radius = initRadius * totalUpscale
