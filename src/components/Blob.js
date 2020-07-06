@@ -101,12 +101,17 @@ export default ({
 
   const totalUpscale = animatedPropsLocal.upscale.value * (1 + spikey / 4)
 
+  const contextRef = useRef(
+    new (window.AudioContext || window.webkitAudioContext)()
+  )
+
   useAudio(
     "assets/sound/default.mp3",
     active,
     active
       ? Math.max(0, Math.min((0.5 - Math.abs(mouseX)) * 2 * bounce, 1)) || 0
-      : 0
+      : 0,
+    contextRef.current
   )
 
   useAudio(
@@ -114,7 +119,8 @@ export default ({
     active,
     active
       ? Math.max(0, Math.min((0.5 - Math.abs(mouseX)) * 2 * spikey, 1)) || 0
-      : 0
+      : 0,
+    contextRef.current
   )
 
   return (

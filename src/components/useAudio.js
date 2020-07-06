@@ -1,13 +1,8 @@
 import React, { useRef, useEffect, useState } from "react"
 import { useThrottle } from "use-throttle"
 
-const useAudio = (url, active, volume) => {
+const useAudio = (url, active, volume, context) => {
   const isFirstRun = useRef(true)
-
-  const contextRef = useRef(
-    new (window.AudioContext || window.webkitAudioContext)()
-  )
-  let context = contextRef.current
 
   const audioBufferRef = useRef(null)
 
@@ -15,7 +10,9 @@ const useAudio = (url, active, volume) => {
 
   useEffect(() => {
     console.log("Setup Audio!")
-    gainNodeRef.current = context.createGain()
+    gainNodeRef.current = context.createGain
+      ? context.createGain()
+      : context.createGainNode()
 
     window
       .fetch(url)
