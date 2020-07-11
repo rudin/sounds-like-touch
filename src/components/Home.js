@@ -31,7 +31,7 @@ const Home = () => (
       <p>
         <i>Rob van Rijswijk</i>
         <br />
-        Secratary
+        Secretary
       </p>
       <p>
         <i>Marisa Tempel</i>
