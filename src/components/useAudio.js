@@ -22,7 +22,7 @@ const useAudio = (url, active, volume, context) => {
         audioBufferRef.current = audioBuffer
       })
     return () => {
-      context.close()
+      // context.close()
     }
   }, [context, url])
 

@@ -94,7 +94,7 @@ export default ({
   const newX = animatedPropsLocal.mouseX.value
   const newY = animatedPropsLocal.mouseY.value
 
-  const bounce = 1 - animatedProps.shrink.value * Math.abs(newX)
+  const bounce = 1 - (animatedProps.shrink.value / 2) * Math.abs(newX)
   const spikey = Math.abs(newY * 2) // 1 = full, 0 = none: blobby
   const radiusOffset = spikey * radiusMaxBezierOffset
   const angleOffset = Math.max(0, Math.min((1 - spikey) * angleMaxBezierOffset))
@@ -105,12 +105,15 @@ export default ({
     new (window.AudioContext || window.webkitAudioContext)()
   )
 
+  const bounceVolume = (0.5 - Math.abs(mouseY)) * (1 - (1 - bounce) * 3)
+  /* Math.min(
+    ((0.5 - Math.abs(mouseY)) * (1 - (1 - bounce) * 3), 1)
+ ) */
+
   useAudio(
     "assets/sound/default.mp3",
     active,
-    active
-      ? Math.max(0, Math.min((0.5 - Math.abs(mouseX)) * 2 * bounce, 1)) || 0
-      : 0,
+    active ? Math.max(0, bounceVolume || 0) : 0,
     contextRef.current
   )
 
@@ -160,7 +163,6 @@ export default ({
             setHover(false)
           }}
         >
-          {/*
           mouseY: {mouseY}
           <div
             style={{ width: mouseY * 100, height: 20, background: "black" }}
@@ -173,15 +175,13 @@ export default ({
               background: "black",
             }}
           />
-
           mouseX: {mouseX}
           <br />
           mouseY: {mouseY}
           <br />
           upscale: {animatedPropsLocal.upscale.value}
           <br />
-          bounce: {bounce}
-        */}
+          bounce: {bounceVolume} {bounce}
         </div>
         <svg
           viewBox="0 0 500 500"
