@@ -26,17 +26,17 @@ const Home = () => (
       <p>
         <i>Rens Machielse</i>
         <br />
-        Board member
+        Chair
       </p>
       <p>
         <i>Rob van Rijswijk</i>
         <br />
-        Board member
+        Secretary
       </p>
       <p>
         <i>Marisa Tempel</i>
         <br />
-        Board member
+        Treasurer
       </p>
     </section>
     <section>
