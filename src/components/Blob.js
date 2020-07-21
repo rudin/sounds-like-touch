@@ -163,7 +163,7 @@ export default ({
             setHover(false)
           }}
         >
-          mouseY: {mouseY}
+          {/*mouseY: {mouseY}
           <div
             style={{ width: mouseY * 100, height: 20, background: "black" }}
           />
@@ -181,7 +181,7 @@ export default ({
           <br />
           upscale: {animatedPropsLocal.upscale.value}
           <br />
-          bounce: {bounceVolume} {bounce}
+          bounce: {bounceVolume} {bounce}*/}
         </div>
         <svg
           viewBox="0 0 500 500"
