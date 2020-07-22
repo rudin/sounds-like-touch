@@ -212,7 +212,6 @@ const App = () => {
               <div style={{ height: 40 }} />
             </Fragment>
                 )*/}
-          <div onClick={toggle}>...</div>
         </div>
       </div>
     </Fragment>
