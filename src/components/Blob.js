@@ -144,6 +144,7 @@ export default ({
       >
         <div
           ref={ref}
+          id="touch"
           style={{
             position: "absolute",
             zIndex: 90,

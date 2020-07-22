@@ -36,3 +36,7 @@ h1 {
   overscroll-behavior-y: contain;
   touch-action: none;
 }
+
+#touch {
+  touch-action: none;
+}

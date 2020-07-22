@@ -111,19 +111,16 @@ const App = () => {
             >
               Touch
             </h1>
-            {windowFocused && (
-              <Blob
-                points={radiusSpring.map((value, index) => ({
-                  radius: 150 + value * 20,
-                  angle:
-                    calcAngle(index, segmentCount) + angleSpring[index] / 6,
-                }))}
-                tick={tick}
-                radiusMaxBezierOffset={-60}
-                angleMaxBezierOffset={calcAngle(1, segmentCount) / 2.5}
-                segmentCount={segmentCount}
-              />
-            )}
+            <Blob
+              points={radiusSpring.map((value, index) => ({
+                radius: 150 + value * 20,
+                angle: calcAngle(index, segmentCount) + angleSpring[index] / 6,
+              }))}
+              tick={tick}
+              radiusMaxBezierOffset={-60}
+              angleMaxBezierOffset={calcAngle(1, segmentCount) / 2.5}
+              segmentCount={segmentCount}
+            />
           </div>
           {!process && <Home />}
           {/* process && (
