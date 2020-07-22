@@ -33,4 +33,5 @@ h1 {
 
 #blob {
   animation: fadein 500ms;
+  overscroll-behavior-y: contain;
 }
