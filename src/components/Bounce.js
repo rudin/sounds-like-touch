@@ -10,11 +10,11 @@ const Bounce = () => {
   const [x, y, ref, mousePosition] = useMousePositionAsFactorFromCenter(
     0, // enterDelay
     0, // leaveDelay
-    10 // fps
+    20 // fps
   )
 
   useEffect(() => {
-    ms.current = x || x === 0 ? 200 + Math.abs(x * 500) : 1000
+    ms.current = x || x === 0 ? 300 + Math.abs(x * 500) : 1000
   }, [x])
 
   const [shrink, toggle] = useToggle(false)
@@ -22,6 +22,7 @@ const Bounce = () => {
   // reset setInterval when fired
 
   const resetTimeout = (y) => {
+    console.log(timeout.current)
     clearTimeout(timeout.current)
     timeout.current = setTimeout(resetTimeout, ms.current)
     toggle()
@@ -42,11 +43,11 @@ const Bounce = () => {
       // ... easily generate the css transform value below.
       shrink: 1,
       // Setup physics
-      config: { mass: 3, tension: 500, friction: 30, precision: 0.01 },
+      config: { mass: 1, tension: 242, friction: 23, precision: 0.05 },
     }
   })
 
-  useEffect(() => set({ shrink: shrink ? 0.5 : 1 }), [shrink])
+  useEffect(() => set({ shrink: shrink ? 0 : 1 }), [shrink])
 
   return (
     <div

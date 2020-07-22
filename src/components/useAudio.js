@@ -48,7 +48,7 @@ const useAudio = (url, active, volume, context) => {
     }
   }, [active, audioBufferRef, context])
 
-  const throttledVolume = useThrottle(volume, 74)
+  const throttledVolume = useThrottle(volume, 40)
 
   useEffect(() => {
     gainNodeRef.current.gain.value = throttledVolume
