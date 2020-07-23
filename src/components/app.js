@@ -72,6 +72,14 @@ const App = () => {
     new (window.AudioContext || window.webkitAudioContext)()
   )
 
+  useEffect(() => {
+    window.document.body.addEventListener(
+      "touchend",
+      () => contextRef.current.resume(),
+      false
+    )
+  })
+
   const defaultVolume = useAudio("assets/sound/default.mp3", contextRef.current)
 
   const spikeyVolume = useAudio("assets/sound/spikey.mp3", contextRef.current)
