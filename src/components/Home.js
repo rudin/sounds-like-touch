@@ -46,7 +46,7 @@ const Home = () => (
         <br />
         Europalaan 2B - F1.19
         <br />
-        Utrecht, NL
+        Utrecht, The Netherlands
         <br />
         diannedsoundsliketouch.eu
         <br />
