@@ -36,11 +36,13 @@ const useAudio = (url, context) => {
     request.onload = function () {
       context.decodeAudioData(
         request.response,
-        function (buffer) {
+        (buffer) => {
           console.log("buffer", buffer)
           audioBufferRef.current = buffer
         },
-        (err) => console.log("error", err)
+        (err) => {
+          window.alert(JSON.stringify(err))
+        }
       )
     }
     request.send()
