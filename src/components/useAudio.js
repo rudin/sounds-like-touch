@@ -91,6 +91,7 @@ const useAudio = (url, context) => {
       // gainNodeRef.current.gain.value = throttledVolume
       // .suspend()
     }
+    gainNodeRef.current.gain.value = throttledVolume
   }, [throttledVolume])
 
   return !audioBufferRef.current
@@ -109,8 +110,8 @@ const useAudio = (url, context) => {
         }
         if (incomingVolume !== volume && setupDone.current === true) {
           console.log("set volume", incomingVolume)
-          // setVolume(volume)
-          gainNodeRef.current.gain.value = incomingVolume
+          setVolume(incomingVolume)
+          // gainNodeRef.current.gain.value = incomingVolume
         }
       }
 }
