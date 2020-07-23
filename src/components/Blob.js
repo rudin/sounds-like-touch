@@ -2,9 +2,8 @@ import { h, Fragment } from "preact"
 import { useState, useEffect, useRef } from "preact/hooks"
 import { useMousePositionAsFactorFromCenter } from "./MousePosition"
 import { useBounce } from "./BounceOscillatorVolume"
-import Oscillator from "./Oscillator"
-import Sawtooth from "./Sawtooth"
-import Sound from "react-sound"
+// import Oscillator from "./Oscillator"
+// import Sawtooth from "./Sawtooth"
 import useAudio from "./useAudio"
 import {
   disableBodyScroll,
@@ -27,6 +26,7 @@ export default ({
   tick,
   radiusMaxBezierOffset,
   angleMaxBezierOffset,
+  contextRef,
 }) => {
   /*
     various factors:
@@ -109,10 +109,6 @@ export default ({
   const angleOffset = Math.max(0, Math.min((1 - spikey) * angleMaxBezierOffset))
 
   const totalUpscale = animatedPropsLocal.upscale.value * (1 + spikey / 4)
-
-  const contextRef = useRef(
-    new (window.AudioContext || window.webkitAudioContext)()
-  )
 
   const bounceVolume =
     (0.5 - Math.abs(mouseY)) *

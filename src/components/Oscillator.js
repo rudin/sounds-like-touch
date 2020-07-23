@@ -1,6 +1,6 @@
 import { h } from "preact"
 import { useState, useEffect, useRef } from "preact/hooks"
-import Tone from "tone"
+// import Tone from "tone"
 import useToggle from "react-use-toggle"
 
 const Oscillator = ({ volume = 1, autoPlay }) => {

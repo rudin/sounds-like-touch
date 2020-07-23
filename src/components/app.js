@@ -24,6 +24,12 @@ const segmentCount = 8
 // per punt een x, y offset please?!
 const calcAngle = (index, count) => ((Math.PI * 2) / count) * index
 
+const SpringThing = ({ tick, children }) => {
+  const radiusSpring = useSpringShift({ count: segmentCount, tick })
+  const angleSpring = useSpringShift({ count: segmentCount, tick })
+  return children({ radiusSpring, angleSpring })
+}
+
 const App = () => {
   const windowFocused = useWindowFocus()
   const [process, toggle] = useToggle(false)
@@ -59,9 +65,11 @@ const App = () => {
   const angleShiftArray = useShift({ count: segmentCount, tick })
   */
 
-  const radiusSpring = useSpringShift({ count: segmentCount, tick })
-  const angleSpring = useSpringShift({ count: segmentCount, tick })
   // return <BounceOscillatorVolume />
+
+  const contextRef = useRef(
+    new (window.AudioContext || window.webkitAudioContext)()
+  )
 
   return (
     <Fragment>
@@ -111,18 +119,26 @@ const App = () => {
             >
               Touch
             </h1>
-            <Blob
-              points={radiusSpring.map((value, index) => ({
-                radius: 150 + value * 20,
-                angle: calcAngle(index, segmentCount) + angleSpring[index] / 6,
-              }))}
-              tick={tick}
-              radiusMaxBezierOffset={-60}
-              angleMaxBezierOffset={calcAngle(1, segmentCount) / 2.5}
-              segmentCount={segmentCount}
-            />
+            {windowFocused && (
+              <SpringThing tick={tick}>
+                {({ radiusSpring, angleSpring }) => (
+                  <Blob
+                    points={radiusSpring.map((value, index) => ({
+                      radius: 150 + value * 20,
+                      angle:
+                        calcAngle(index, segmentCount) + angleSpring[index] / 6,
+                    }))}
+                    tick={tick}
+                    radiusMaxBezierOffset={-60}
+                    angleMaxBezierOffset={calcAngle(1, segmentCount) / 2.5}
+                    segmentCount={segmentCount}
+                    contextRef={contextRef}
+                  />
+                )}
+              </SpringThing>
+            )}
           </div>
-          {!process && <Home />}
+          <Home />
           {/* process && (
             <Fragment>
               <div style={{ marginTop: 100 }}>
