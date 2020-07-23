@@ -18,6 +18,7 @@ import { useShift as useSpringShift } from "./ShiftWithSpring"
 import Home from "./Home"
 import GradientBackground from "./GradientBackground"
 import Blob from "./Blob"
+import useAudio from "./useAudio"
 
 const segmentCount = 8
 // een cirkel, onderverdeeld in 8 hoeken / vlakken
@@ -71,6 +72,10 @@ const App = () => {
     new (window.AudioContext || window.webkitAudioContext)()
   )
 
+  const defaultVolume = useAudio("assets/sound/default.mp3", contextRef.current)
+
+  const spikeyVolume = useAudio("assets/sound/spikey.mp3", contextRef.current)
+
   return (
     <Fragment>
       <GradientBackground />
@@ -119,7 +124,7 @@ const App = () => {
             >
               Touch
             </h1>
-            {windowFocused && (
+            {(windowFocused || !windowFocused) && (
               <SpringThing tick={tick}>
                 {({ radiusSpring, angleSpring }) => (
                   <Blob
@@ -133,6 +138,7 @@ const App = () => {
                     angleMaxBezierOffset={calcAngle(1, segmentCount) / 2.5}
                     segmentCount={segmentCount}
                     contextRef={contextRef}
+                    {...{ defaultVolume, spikeyVolume }}
                   />
                 )}
               </SpringThing>

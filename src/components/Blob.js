@@ -4,7 +4,6 @@ import { useMousePositionAsFactorFromCenter } from "./MousePosition"
 import { useBounce } from "./BounceOscillatorVolume"
 // import Oscillator from "./Oscillator"
 // import Sawtooth from "./Sawtooth"
-import useAudio from "./useAudio"
 import {
   disableBodyScroll,
   enableBodyScroll,
@@ -26,7 +25,8 @@ export default ({
   tick,
   radiusMaxBezierOffset,
   angleMaxBezierOffset,
-  contextRef,
+  defaultVolume,
+  spikeyVolume,
 }) => {
   /*
     various factors:
@@ -93,8 +93,11 @@ export default ({
 
   useEffect(() => {
     set({ mouseY: active ? mouseY : 0 })
-    setAnimatedActive({ active: active ? 1 : 0 })
-  }, [mouseY, active])
+    if (!defaultVolume) console.log({ defaultVolume, spikeyVolume })
+    if (defaultVolume && spikeyVolume) {
+      setAnimatedActive({ active: active ? 1 : 0 })
+    }
+  }, [mouseY, active, set, defaultVolume, spikeyVolume, setAnimatedActive])
 
   useEffect(() => {
     set({ mouseX: active ? mouseX : 0 })
@@ -112,25 +115,20 @@ export default ({
 
   const bounceVolume =
     (0.5 - Math.abs(mouseY)) *
-    (1 - (1 - bounce) * 3) *
+    (1 - (1 - bounce) * 5) *
     animatedActive.active.value
   /* Math.min(
     ((0.5 - Math.abs(mouseY)) * (1 - (1 - bounce) * 3), 1)
  ) */
 
-  useAudio(
-    "assets/sound/default.mp3",
-    active,
-    Math.max(0, bounceVolume || 0),
-    contextRef.current
-  )
-
-  useAudio(
-    "assets/sound/spikey.mp3",
-    active,
-    Math.max(0, Math.min((0.6 - Math.abs(mouseX)) * 2 * spikey, 1)) || 0,
-    contextRef.current
-  )
+  useEffect(() => {
+    defaultVolume && defaultVolume(active, Math.max(0, bounceVolume || 0))
+    spikeyVolume &&
+      spikeyVolume(
+        active,
+        Math.max(0, Math.min((0.6 - Math.abs(mouseX)) * 1.8 * spikey, 1)) || 0
+      )
+  }, [active, bounceVolume, defaultVolume, mouseX, spikey, spikeyVolume])
 
   return (
     <Fragment>

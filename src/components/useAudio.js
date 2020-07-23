@@ -1,12 +1,15 @@
 import React, { useRef, useEffect, useState } from "react"
 import { useThrottle } from "use-throttle"
 
-const useAudio = (url, active, volume, context) => {
-  const isFirstRun = useRef(true)
+const useAudio = (url, context) => {
+  const [active, setActive] = useState(false)
+  const [volume, setVolume] = useState(0)
+
+  const setupDone = useRef(false)
 
   const audioBufferRef = useRef(null)
-
   const gainNodeRef = useRef()
+  const sourceRef = useRef()
 
   useEffect(() => {
     console.log("Setup Audio!")
@@ -14,47 +17,100 @@ const useAudio = (url, active, volume, context) => {
       ? context.createGain()
       : context.createGainNode()
 
+    /*
     window
       .fetch(url)
       .then((response) => response.arrayBuffer())
-      .then((arrayBuffer) => context.decodeAudioData(arrayBuffer))
+      .then((arrayBuffer) =>
+        context.decodeAudioData(arrayBuffer, (audioBuffer) => {
+          audioBufferRef.current = audioBuffer
+        })
+      )
+*/
+
+    const request = new XMLHttpRequest()
+    request.open("GET", url, true)
+    request.responseType = "arraybuffer"
+
+    // Decode asynchronously
+    request.onload = function () {
+      context.decodeAudioData(
+        request.response,
+        function (buffer) {
+          console.log("buffer", buffer)
+          audioBufferRef.current = buffer
+        },
+        (err) => console.log("error", err)
+      )
+    }
+    request.send()
+    /*
       .then((audioBuffer) => {
         audioBufferRef.current = audioBuffer
       })
+      .catch((err) => {
+        console.log("error setting up")
+        console.log(err)
+      })
+      */
     return () => {
       // context.close()
+      console.log("disconnect gain node")
+      gainNodeRef.current.disconnect()
     }
   }, [context, url])
 
-  useEffect(() => {
-    if (active === true) {
-      if (isFirstRun.current === false) {
-        return
-      }
-      isFirstRun.current = false
-      const gainNode = gainNodeRef.current
-      const source = context.createBufferSource()
-      source.buffer = audioBufferRef.current
-      // source.connect(context.destination);
+  const setup = () => {
+    console.log("setup gogo")
 
-      source.connect(gainNode)
-      gainNode.connect(context.destination)
+    const gainNode = gainNodeRef.current
+    sourceRef.current = context.createBufferSource()
+    const source = sourceRef.current
+    source.buffer = audioBufferRef.current
+    console.log("set source buffer", audioBufferRef.current)
+    // source.connect(context.destination)
 
-      source.loop = true
-      source.start()
-      // random gain!
+    source.connect(gainNode)
+    gainNode.connect(context.destination)
 
-      // setInterval(randomGain, 100)
-    }
-  }, [active, audioBufferRef, context])
+    source.loop = true
+    source.start(0)
+
+    gainNodeRef.current.gain.value = 0.3
+
+    setupDone.current = true
+  }
 
   const throttledVolume = useThrottle(volume, 40)
 
   useEffect(() => {
-    if (isFirstRun.current === false) {
-      gainNodeRef.current.gain.value = throttledVolume
+    if (setupDone.current === true) {
+      // console.log("change volume")
+      // gainNodeRef.current.gain.value = throttledVolume
+      // .suspend()
     }
   }, [throttledVolume])
+
+  return !audioBufferRef.current
+    ? null
+    : (incomingActive, incomingVolume) => {
+        if (
+          setupDone.current === false &&
+          audioBufferRef.current &&
+          incomingActive === true
+        ) {
+          setup()
+        }
+        if (incomingActive !== active) {
+          console.log("set active", incomingActive)
+          setActive(active)
+        }
+        if (incomingVolume !== volume && setupDone.current === true) {
+          console.log("set volume", incomingVolume)
+          // setVolume(volume)
+          gainNodeRef.current.gain.value = incomingVolume
+        }
+      }
 }
 
 export default useAudio
