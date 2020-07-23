@@ -74,7 +74,7 @@ const App = () => {
 
   useEffect(() => {
     window.document.body.addEventListener(
-      "touchend",
+      "touchstart",
       () => contextRef.current.resume(),
       false
     )
