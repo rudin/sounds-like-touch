@@ -132,7 +132,7 @@ export default ({
   useAudio(
     "assets/sound/spikey.mp3",
     active,
-    Math.max(0, Math.min((0.5 - Math.abs(mouseX)) * 2 * spikey, 1)) || 0,
+    Math.max(0, Math.min((0.6 - Math.abs(mouseX)) * 2 * spikey, 1)) || 0,
     contextRef.current
   )
 
