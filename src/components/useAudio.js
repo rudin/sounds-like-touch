@@ -51,7 +51,9 @@ const useAudio = (url, active, volume, context) => {
   const throttledVolume = useThrottle(volume, 40)
 
   useEffect(() => {
-    gainNodeRef.current.gain.value = throttledVolume
+    if (isFirstRun.current === false) {
+      gainNodeRef.current.gain.value = throttledVolume
+    }
   }, [throttledVolume])
 }
 

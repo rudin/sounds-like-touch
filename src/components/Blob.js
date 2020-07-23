@@ -70,11 +70,19 @@ export default ({
       // We store under a single key (xys) instead of separate keys ...
       // ... so that we can use animatedProps.xys.interpolate() to ...
       // ... easily generate the css transform value below.
+      active: 0,
       upscale: 1,
       mouseX: 0,
       mouseY: 0,
       // Setup physics
       config: { mass: 3, tension: 500, friction: 30, precision: 0.01 },
+    }
+  })
+
+  const [animatedActive, setAnimatedActive] = useSpring(() => {
+    return {
+      active: 0,
+      config: { mass: 1, tension: 120, friction: 14, precision: 0.01 },
     }
   })
 
@@ -85,6 +93,7 @@ export default ({
 
   useEffect(() => {
     set({ mouseY: active ? mouseY : 0 })
+    setAnimatedActive({ active: active ? 1 : 0 })
   }, [mouseY, active])
 
   useEffect(() => {
@@ -105,7 +114,10 @@ export default ({
     new (window.AudioContext || window.webkitAudioContext)()
   )
 
-  const bounceVolume = (0.5 - Math.abs(mouseY)) * (1 - (1 - bounce) * 3)
+  const bounceVolume =
+    (0.5 - Math.abs(mouseY)) *
+    (1 - (1 - bounce) * 3) *
+    animatedActive.active.value
   /* Math.min(
     ((0.5 - Math.abs(mouseY)) * (1 - (1 - bounce) * 3), 1)
  ) */
@@ -113,16 +125,14 @@ export default ({
   useAudio(
     "assets/sound/default.mp3",
     active,
-    active ? Math.max(0, bounceVolume || 0) : 0,
+    Math.max(0, bounceVolume || 0),
     contextRef.current
   )
 
   useAudio(
     "assets/sound/spikey.mp3",
     active,
-    active
-      ? Math.max(0, Math.min((0.5 - Math.abs(mouseX)) * 2 * spikey, 1)) || 0
-      : 0,
+    Math.max(0, Math.min((0.5 - Math.abs(mouseX)) * 2 * spikey, 1)) || 0,
     contextRef.current
   )
 
