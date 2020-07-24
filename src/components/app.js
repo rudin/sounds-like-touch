@@ -40,8 +40,7 @@ const App = () => {
   const [running, setRunning] = useState(true)
 
   const updateTick = () => {
-    console.log(tick)
-
+    // console.log(tick)
     setTick((tick) => tick + 1)
   }
   const nextFrame = () => {
@@ -68,22 +67,27 @@ const App = () => {
 
   // return <BounceOscillatorVolume />
 
-  const contextRef = useRef(
-    new (window.AudioContext || window.webkitAudioContext)()
-  )
+  const contextRef = useRef()
 
-  const resumeAudio = () => {
-    // if (contextRef.current.state !== "running") {
-    // window.alert("resume audio")
-    contextRef.current.resume()
-    // }
+  const checkAudio = () => {
+    console.log("check audio")
+    if (!contextRef.current) {
+      console.log("init audio context")
+      contextRef.current = new (window.AudioContext ||
+        window.webkitAudioContext)()
+    }
+    if (contextRef.current && contextRef.current.state !== "running") {
+      contextRef.current.resume()
+    }
   }
 
   useEffect(() => {
     if (windowFocused === true) {
-      contextRef.current.resume()
+      console.log("resume audio")
+      contextRef.current && contextRef.current.resume()
     } else {
-      contextRef.current.suspend()
+      console.log("suspend audio")
+      contextRef.current && contextRef.current.suspend()
     }
   }, [windowFocused])
 
@@ -102,8 +106,8 @@ const App = () => {
           backgroundColor: "#FFF",
           minHeight: "100vh",
         }}
-        onTouchStart={resumeAudio}
-        onClick={resumeAudio}
+        onTouchStart={checkAudio}
+        onClick={checkAudio}
       >
         <div
           style={{
