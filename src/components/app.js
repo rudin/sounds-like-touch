@@ -72,13 +72,12 @@ const App = () => {
     new (window.AudioContext || window.webkitAudioContext)()
   )
 
-  useEffect(() => {
-    window.document.body.addEventListener(
-      "touchstart",
-      () => contextRef.current.resume(),
-      false
-    )
-  })
+  const resumeAudio = () => {
+    if (contextRef.current.state !== "running") {
+      window.alert("resume audio")
+      contextRef.current.resume()
+    }
+  }
 
   const defaultVolume = useAudio("assets/sound/default.mp3", contextRef.current)
 
@@ -95,6 +94,7 @@ const App = () => {
           backgroundColor: "#FFF",
           minHeight: "100vh",
         }}
+        onTouchStart={resumeAudio}
       >
         <div
           style={{
