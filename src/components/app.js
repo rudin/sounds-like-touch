@@ -79,6 +79,14 @@ const App = () => {
     }
   }
 
+  useEffect(() => {
+    if (windowFocused === true) {
+      contextRef.current.resume()
+    } else {
+      contextRef.current.suspend()
+    }
+  }, [windowFocused])
+
   const defaultVolume = useAudio("assets/sound/default.mp3", contextRef.current)
 
   const spikeyVolume = useAudio("assets/sound/spikey.mp3", contextRef.current)
