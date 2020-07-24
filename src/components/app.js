@@ -74,7 +74,7 @@ const App = () => {
 
   const resumeAudio = () => {
     if (contextRef.current.state !== "running") {
-      window.alert("resume audio")
+      // window.alert("resume audio")
       contextRef.current.resume()
     }
   }
