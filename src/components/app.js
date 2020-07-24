@@ -95,6 +95,7 @@ const App = () => {
           minHeight: "100vh",
         }}
         onTouchStart={resumeAudio}
+        onClick={resumeAudio}
       >
         <div
           style={{
