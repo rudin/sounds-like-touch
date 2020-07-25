@@ -102,7 +102,7 @@ const App = () => {
 
   const defaultVolume = useAudio("assets/sound/default.mp3", contextRef.current)
 
-  const spikeyVolume = useAudio("assets/sound/spikey.mp3", contextRef.current)
+  const spikeyVolume = useAudio("assets/sound/spikey2.mp3", contextRef.current)
 
   return (
     <Fragment>
