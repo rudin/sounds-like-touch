@@ -82,6 +82,15 @@ const App = () => {
   }
 
   useEffect(() => {
+    if (
+      !navigator.userAgent.match(/Android/i) ||
+      navigator.userAgent.match(/Firefox/i)
+    ) {
+      checkAudio()
+    }
+  }, [])
+
+  useEffect(() => {
     if (windowFocused === true) {
       console.log("resume audio")
       contextRef.current && contextRef.current.resume()
