@@ -39,7 +39,7 @@ const Home = () => (
         Treasurer
       </p>
     </section>
-    <section>
+    <section style={{ paddingBottom: "3em" }}>
       <p>
         <h1>Contact</h1>
         Sounds Like Touch
@@ -48,7 +48,12 @@ const Home = () => (
         <br />
         Utrecht, The Netherlands
         <br />
-        diannedsoundsliketouch.eu
+        <a
+          href="mailto:dianneverdonk@gmail.com"
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
+          dianneverdonk@gmail.com
+        </a>
         <br />
         CoC: 74526707
       </p>
