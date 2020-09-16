@@ -4,8 +4,9 @@ const GradientBackground = () => (
   <div
     style={{
       position: "fixed",
-      left: 0,
-      right: 0,
+      left: "50%",
+      width: "clamp(130vh, 100vw, 100vw)",
+      transform: "translateX(-50%)",
       top: 0,
       height: "100vh",
       zIndex: 10,
