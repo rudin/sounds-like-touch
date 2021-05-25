@@ -92,7 +92,7 @@ const Tactologylab = () => {
         <p>
           <ul>
             <li>Regular price: €150,-</li>
-            <li>Student price: €100,-</li>
+            <li>Student price: €120,-</li>
           </ul>
         </p>
       </section>
