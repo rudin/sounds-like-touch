@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "preact build --template src/index.html --no-prerender",
+    "build": "preact build --template src/index.html --no-prerender && cp redirects.txt build/_redirects",
     "serve": "sirv build --cors --single",
     "dev": "preact watch --template src/index.html",
     "lint": "eslint src",
