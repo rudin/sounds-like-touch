@@ -19,6 +19,8 @@ import Home from "./Home"
 import GradientBackground from "./GradientBackground"
 import Blob from "./Blob"
 import useAudio from "./useAudio"
+import { useLocation } from "./useLocation"
+import Tactologylab from "./Tactologylab"
 
 const segmentCount = 8
 // een cirkel, onderverdeeld in 8 hoeken / vlakken
@@ -32,6 +34,16 @@ const SpringThing = ({ tick, children }) => {
 }
 
 const App = () => {
+
+  const { pathname } = useLocation()
+  const onTactologylab = pathname.includes("tactologylab")
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, [pathname])
+
+  console.log(pathname)
+
   const windowFocused = useWindowFocus()
   const [process, toggle] = useToggle(false)
 
@@ -106,7 +118,7 @@ const App = () => {
 
   return (
     <Fragment>
-      <GradientBackground />
+      <GradientBackground id={onTactologylab ? "tactology" : "default"}/>
       <div
         id="app"
         style={{
@@ -134,7 +146,7 @@ const App = () => {
             }}
           >
             <h1 style={{ textTransform: "uppercase", position: "absolute" }}>
-              Sounds
+              {onTactologylab ? "Tactology" : "Sounds"}
             </h1>
             <h1
               style={{
@@ -143,7 +155,7 @@ const App = () => {
                 right: 0,
               }}
             >
-              Like
+              {onTactologylab ? "Lab" : "Like"}
             </h1>
             <h1
               style={{
@@ -152,7 +164,7 @@ const App = () => {
                 bottom: 0,
               }}
             >
-              Touch
+              {onTactologylab ? "" : "Touch"}
             </h1>
             {(windowFocused || !windowFocused) && (
               <SpringThing tick={tick}>
@@ -174,7 +186,7 @@ const App = () => {
               </SpringThing>
             )}
           </div>
-          <Home />
+          {pathname.includes("tactologylab") ? <Tactologylab /> : <Home />}
           {/* process && (
             <Fragment>
               <div style={{ marginTop: 100 }}>

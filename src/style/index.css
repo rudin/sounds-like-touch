@@ -22,6 +22,10 @@ h1 {
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+}
+
 @keyframes fadein {
   from {
     color: white;
