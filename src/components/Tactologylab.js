@@ -104,13 +104,19 @@ const Tactologylab = () => {
         </p>
       </section>
 
-      <section style={{ paddingBottom: "3em" }}>
+      <section>
         <h1>Contact</h1>
         <p>
           For any questions, please contact <a href="https://dianneverdonk.com/contact/" rel="noreferrer noopener" target="_blank">Dianne Verdonk</a>
         </p>
       </section>
 
+      <section style={{ paddingTop: "3em", paddingBottom: "3em" }}>
+          <p>
+            Made possible through <br />the generous support of:<br />
+            <img src="/assets/sponsors_tl.png" height="58" style={{marginTop: "1em"}}/>
+          </p>
+        </section>
 
       <div style={{ position: "fixed", left: x, top: y, width, height, zIndex: 9876 }}>
         <iframe src="https://player.vimeo.com/video/554668833?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Tactology Lab - Sounds Like Touch"></iframe>
