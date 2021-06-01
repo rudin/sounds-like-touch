@@ -21,6 +21,7 @@ import Blob from "./Blob"
 import useAudio from "./useAudio"
 import { useLocation } from "./useLocation"
 import Tactologylab from "./Tactologylab"
+import Helmet from "preact-helmet";
 
 const segmentCount = 8
 // een cirkel, onderverdeeld in 8 hoeken / vlakken
@@ -119,6 +120,7 @@ const App = () => {
   return (
     <Fragment>
       <GradientBackground id={onTactologylab ? "tactology" : "default"}/>
+      <Helmet title={onTactologylab ? "Tactology Lab" : "Sounds Like Touch"}/>
       <div
         id="app"
         style={{
