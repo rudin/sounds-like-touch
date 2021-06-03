@@ -44,7 +44,7 @@ const Home = () => {
       <section>
         <p>
           <h1>Who</h1>
-          <i>Dianne Verdonk</i>
+          <a href="https://dianneverdonk.com/" rel="noreferrer noopener" target="_blank"><i>Roald van Dillewijn</i></a>
           <br />
           Initiator and Lab curator
         </p>
