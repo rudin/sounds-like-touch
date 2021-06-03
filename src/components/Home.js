@@ -51,8 +51,10 @@ const Home = () => {
         <p>
           {`Performer, composer and instrument developer - who seeks the ultimate, personal form of musical expression in the creation and performance of electronic/electroacoustic music.`}
         </p>
-        <p>
-            <i>Roald van Dillewijn</i>
+        <p><a href="/tactologylab" onClick={e => {
+            e.preventDefault()
+            push("https://roaldvandillewijn.nl/")
+          }}><i>Roald van Dillewijn</i></a>
             <br />
             Lab curator
         </p>
