@@ -55,6 +55,7 @@ const Home = () => {
             <i>Roald van Dillewijn</i>
             <br />
             Lab curator
+        </p>
         <p>
             {'Sound artist, creative coder, designer and lecturer, always aiming to work on a new view of designing sounds and let them interact in a fascinating way.'}
         </p>
