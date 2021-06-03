@@ -29,7 +29,7 @@ const Home = () => {
           <a href="/tactologylab" onClick={e => {
             e.preventDefault()
             push("/tactologylab")
-          }}>Tactology Lab</a> a 4-day structured programme that brings artists and creators together. Tactology Lab is a space to experiment with expression through tactile interaction with materials and electronics in art practices.
+          }}>Tactology Lab</a>, a 4-day structured programme that brings artists and creators together. Tactology Lab is a space to experiment with expression through tactile interaction with materials and electronics in art practices.
         </p>
         <p>
             The programme enhances the exchange between local, professional artists and designers in Utrecht, collaborating on new tangible electronic ways of expression for a live performance context. The results of our first Tactology Lab will be presented during the Gaudeamus festival in September 2021.
@@ -46,10 +46,13 @@ const Home = () => {
           <h1>Who</h1>
           <i>Dianne Verdonk</i>
           <br />
-          Initiator
+          Initiator and Lab curator
         </p>
         <p>
           {`Performer, composer and instrument developer - who seeks the ultimate, personal form of musical expression in the creation and performance of electronic/electroacoustic music.`}
+        </p>
+        <p>
+            {'Sound artist, creative coder, designer and lecturer, always aiming to work on a new view of designing sounds and let them interact in a fascinating way.'}
         </p>
         <p>
           <i>Rens Machielse</i>
