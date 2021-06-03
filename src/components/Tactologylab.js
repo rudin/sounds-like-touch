@@ -57,15 +57,20 @@ const Tactologylab = () => {
         <h1>Dates</h1>
         <p>
           <ul>
-            <li><i>Day 1:   invent </i> &nbsp; 1 July &nbsp; morning and afternoon &nbsp; Lab Pastoe</li>
-            <li>10/7: Day 2</li>
-            <li>11/7: Day 3</li>
-            <li>26/8: Day 4</li>
-            <li>11/9 and 12/9: performance(s) and expo at Gaudeamus festival</li>
+            <li><i>Day 1: invent </i> &nbsp; 1 July &nbsp; morning + afternoon &nbsp; Lab Pastoe</li>
+            <li><i>Day 2: build </i> &nbsp; 10 July &nbsp; morning + afternoon &nbsp; Uitvindersgilde</li>
+            <li><i>Day 3: interact </i> &nbsp; 11 July &nbsp; morning + afternoon &nbsp; Uitvindersgilde</li>
+            <li><i>Day 4: expose </i> &nbsp; 26 Augustus &nbsp; morning + afternoon &nbsp; TBA</li>
+          </ul>
+        </p>
+        <p>
+          <ul>
+            <li>Presentation outcome at Gaudeamus festival: 11 and 12 September</li>
           </ul>
         </p>
       </section>
 
+/*
       <section>
         <h1>Location</h1>
         <p>
@@ -73,6 +78,7 @@ const Tactologylab = () => {
           Various lab spaces in Utrecht – TBA
         </p>
       </section>
+*/
 
       <section>
         <h1>What you get</h1>
