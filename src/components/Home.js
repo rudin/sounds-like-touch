@@ -25,7 +25,7 @@ const Home = () => {
         </p>
 
         <p>
-            {'Sounds Like Touch organises the so-called'}
+            {'Sounds Like Touch organises the so-called '}
           <a href="/tactologylab" onClick={e => {
             e.preventDefault()
             push("/tactologylab")
