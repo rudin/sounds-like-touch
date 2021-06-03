@@ -16,10 +16,7 @@ const Tactologylab = () => {
       </section>
       <section>
         <p>
-          Tactology Lab is a 4-day workshops and performance program for artists and designers of various skills and art disciplines. Together they develop physical, tangible electronic prototypes for a live performance context. The making process and the results will be shared via an online platform, to make the designs accessible to a large, both local and international community, and to provide an international stage to local makers.
-        </p>
-        <p>
-          We believe that physical ways of interaction with electronics lead to a visible, personal, and rousing performance experience, advancing a strong connection between performer and audience.
+          Tactology Lab is a 4-day structured workshop and performance program for artists and creators of various skills and art disciplines, organised by Sounds Like Touch. We believe that expression through tactile electronics can amplify a personal, visible, rousing performance experience, enhancing a strong connection between performer and audience. With Tactology Lab, Sounds Like Touch provides a unique learning space, basic materials and coaching by professionals. Additionally, the creative processes and the results will be shared via an online platform to provide an international stage to local makers.
         </p>
         <p>
           {/* <a href="/" onClick={e => {
