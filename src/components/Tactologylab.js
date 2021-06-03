@@ -47,11 +47,14 @@ const Tactologylab = () => {
       <section>
         <h1>Programme</h1>
         <p>
+            Since this is a group project, it is important to be available at all of the Lab Days! All locations are in Utrecht, The Netherlands.
+        </p>
+        <p>
           <ul>
-            <li><i>Day 1: invent </i> &nbsp;&nbsp; 1 July, morning + afternoon, Lab Pastoe</li>
-            <li><i>Day 2: build </i> &nbsp;&nbsp; 10 July, morning + afternoon, Uitvindersgilde</li>
-            <li><i>Day 3: interact </i> 11 July, morning + afternoon, Uitvindersgilde</li>
-            <li><i>Day 4: expose </i> &nbsp; 26 August, morning + afternoon, location TBA</li>
+            <li><i>Day 1: invent </i> &nbsp;&nbsp; 1 July &nbsp; morning + afternoon</li>
+            <li><i>Day 2: build </i> &nbsp;&nbsp; 10 July &nbsp; morning + afternoon</li>
+            <li><i>Day 3: interact </i> 11 July &nbsp; morning + afternoon</li>
+            <li><i>Day 4: expose </i> &nbsp; 26 August &nbsp; morning + afternoon</li>
           </ul>
         </p>
         <p>
