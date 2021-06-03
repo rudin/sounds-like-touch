@@ -26,17 +26,21 @@ const Tactologylab = () => {
           <div ref={ref} style={{ width: "100%", paddingBottom: "56.25%" }} />
         </p>
       </section>
+
+<section>
+        <h1>Lab 1: Exchange</h1>
+        <p>
+          Tactology Lab 1 enhances the exchange between local, professional artists and designers in Utrecht through multidisciplinary collaboration. Within groups, they develop physical, tangible electronic prototypes for a live performance context. In four days, participants will work towards exposing and performing their outcomes during the Gaudeamus festival in September 2021.
+        </p>
+      </section>
+
       <section>
         <h1>Participate</h1>
         <p>
-          Providing a program and space for experiments, Tactology Lab is for you if you are interested as an artist/designer in working with electronics and exploring ways to connect physical/material to digital/electronic to advance your art practice.
+          Providing a program and space for experiments, Tactology Lab is for you if you are interested as an artist or creator in working with electronics and exploring ways to connect physical and material to the digital and electronics to advance your art practice.
         </p>
         <p>
-          If you're an artist who's willing to work with electronics, but are still a beginner, this program is perfect for you. If you consider yourself a pure performer who's interested in experimenting with physical, interactive objects to improve your personal expression, we invite you to participate. If you're already a software and hardware geek but looking for the interaction that suits you, we encourage you to sign up!
-        </p>
-        <p>
-          Our exchange of expertise will lead us to a perfect learning space, showing the results of our experiments during the Gaudeamus festival in September 2021.
-        </p>
+          It doesn’t matter if you are a beginner or advanced in working with electronics or physical materials; as long as you are interested in combining these, your contribution is valuable. Our exchange of expertise will lead us to an inspiring, creative space working towards new ways of tactile expression. Want to participate? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFvo43NYqwi1p1816kWYCq_7-T6cWH4Qmo7b8Ev8CiTnXtcg/viewform" rel="noreferrer noopener" target="_blank">Sign up here!</a>
       </section>
 
       <section>
