@@ -22,15 +22,20 @@ const Home = () => {
         </p>
         <p>
           <div ref={ref} style={{ width: "100%", paddingBottom: "56.25%" }} />
-        </p><p>
+        </p>
 
+        <p>
+            {'Sounds Like Touch organises the so-called'}
           <a href="/tactologylab" onClick={e => {
             e.preventDefault()
             push("/tactologylab")
-          }}>Tactology Lab</a> is a program to experiment with physical, tactile interaction with technology. The main goal is evoking an expressive, tangible performance practice in the arts. The program enhances the exchange between local, professional artists and designers in Utrecht through multidisciplinary collaboration. The output of Tactology Lab are prototypes of physical instruments and a performance at Gaudeamus in September 2021.
+          }}>Tactology Lab</a> a 4-day structured programme that brings artists and creators together. Tactology Lab is a space to experiment with expression through tactile interaction with materials and electronics in art practices.
         </p>
         <p>
-          Are you interested in participating? <a href="/tactologylab" onClick={e => {
+            The programme enhances the exchange between local, professional artists and designers in Utrecht, collaborating on new tangible electronic ways of expression for a live performance context. The results of our first Tactology Lab will be presented during the Gaudeamus festival in September 2021.
+        </p>
+        <p>
+          Are you an artist or creator and interested in participating in our Tactology Labs? <a href="/tactologylab" onClick={e => {
             e.preventDefault()
             push("/tactologylab")
           }}>Read more through this link!</a>
