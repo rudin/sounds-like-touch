@@ -51,10 +51,10 @@ const Tactologylab = () => {
         </p>
         <p>
           <ul>
-            <li><i>Day 1: invent </i> &nbsp;&nbsp; 1 July &nbsp; morning + afternoon</li>
-            <li><i>Day 2: build </i> &nbsp;&nbsp; 10 July &nbsp; morning + afternoon</li>
-            <li><i>Day 3: interact </i> 11 July &nbsp; morning + afternoon</li>
-            <li><i>Day 4: expose </i> &nbsp; 26 August &nbsp; morning + afternoon</li>
+            <li><i>Day 1: invent </i> &nbsp; &nbsp; 1 July &nbsp; morning + afternoon</li>
+            <li><i>Day 2: build </i> &nbsp; &nbsp; 10 July &nbsp; morning + afternoon</li>
+            <li><i>Day 3: interact </i> &nbsp;11 July &nbsp; morning + afternoon</li>
+            <li><i>Day 4: expose </i> &nbsp;&nbsp; 26 August &nbsp; morning + afternoon</li>
           </ul>
         </p>
         <p>
