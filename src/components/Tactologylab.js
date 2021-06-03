@@ -56,10 +56,10 @@ const Tactologylab = () => {
           <ul>
             <li>24/6: Kick Off lecture &nbsp; performance LAB 1</li>
             <li>01/7: Day 1</li>
-            <li>11/7: Day 2</li>
-            <li>12/7: Day 3</li>
-            <li>26/8 – 28/8 (TBA): Day 4</li>
-            <li>08/9 – 12/9: performance(s) and expo at Gaudeamus festival</li>
+            <li>10/7: Day 2</li>
+            <li>11/7: Day 3</li>
+            <li>26/8: Day 4</li>
+            <li>11/9 and 12/9: performance(s) and expo at Gaudeamus festival</li>
           </ul>
         </p>
       </section>
