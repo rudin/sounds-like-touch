@@ -40,7 +40,7 @@ const Tactologylab = () => {
           Providing a program and space for experiments, Tactology Lab is for you if you are interested as an artist or creator in working with electronics and exploring ways to connect physical and material to the digital and electronics to advance your art practice.
         </p>
         <p>
-          It doesn’t matter if you are a beginner or advanced in working with electronics or physical materials; as long as you are interested in combining these, your contribution is valuable. Our exchange of expertise will lead us to an inspiring, creative space working towards new ways of tactile expression. Want to participate? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFvo43NYqwi1p1816kWYCq_7-T6cWH4Qmo7b8Ev8CiTnXtcg/viewform" rel="noreferrer noopener" target="_blank">Sign up here!</a>
+          It doesn’t matter if you are a beginner or advanced at working with electronics or physical materials; as long as you are interested in combining these, your contribution is valuable. Our exchange of expertise will lead us to an inspiring, creative space working towards new ways of tactile expression. Want to participate? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFvo43NYqwi1p1816kWYCq_7-T6cWH4Qmo7b8Ev8CiTnXtcg/viewform" rel="noreferrer noopener" target="_blank">Sign up here!</a>
         </p>
         </section>
 
@@ -52,14 +52,14 @@ const Tactologylab = () => {
         <p>
           <ul>
             <li><i>Day 1: invent </i> &nbsp; &nbsp; <b>1 July</b> &nbsp;&nbsp; morning + afternoon</li>
-            <li><i>Day 2: build </i> &nbsp; &nbsp; <strong>10 July</strong> &nbsp;&nbsp; morning + afternoon</li>
+            <li><i>Day 2: build </i> &nbsp; &nbsp; <b>10 July</b> &nbsp;&nbsp; morning + afternoon</li>
             <li><i>Day 3: interact </i> &nbsp;<b>11 July</b> &nbsp;&nbsp; morning + afternoon</li>
-            <li><i>Day 4: expose </i> &nbsp;&nbsp; 26 August&nbsp; morning + afternoon</li>
+            <li><i>Day 4: expose </i> &nbsp;&nbsp; <b>26 August</b>&nbsp; morning + afternoon</li>
           </ul>
         </p>
         <p>
           <ul>
-            <li>Presentation outcome at Gaudeamus festival: 11 and 12 September</li>
+            <li>Presentation outcome at Gaudeamus festival: <b>11 and 12 September</b></li>
           </ul>
         </p>
       </section>
