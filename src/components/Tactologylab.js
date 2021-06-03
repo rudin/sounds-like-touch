@@ -45,13 +45,13 @@ const Tactologylab = () => {
         </section>
 
       <section>
-        <h1>Dates</h1>
+        <h1>Programme</h1>
         <p>
           <ul>
             <li><i>Day 1: invent </i> &nbsp;&nbsp; &nbsp; 1 July &nbsp; morning + afternoon &nbsp; Lab Pastoe</li>
             <li><i>Day 2: build </i> &nbsp;&nbsp; &nbsp; 10 July &nbsp; morning + afternoon &nbsp; Uitvindersgilde</li>
             <li><i>Day 3: interact </i> &nbsp; 11 July &nbsp; morning + afternoon &nbsp; Uitvindersgilde</li>
-            <li><i>Day 4: expose </i> &nbsp; &nbsp; 26 Augustus &nbsp; morning + afternoon &nbsp; TBA</li>
+            <li><i>Day 4: expose </i> &nbsp; &nbsp; 26 August &nbsp; morning + afternoon &nbsp; TBA</li>
           </ul>
         </p>
         <p>
@@ -65,13 +65,13 @@ const Tactologylab = () => {
         <h1>What you get</h1>
         <p>
           <ul>
-            <li>Full 4-day program, curated by Dianne Verdonk and Roald van Dillewijn</li>
-            <li>Performance/expo at Gaudeamus festival 2021</li>
+            <li>Full 4-day programme, curated by performer and instrument designer Dianne Verdonk and creative software designer and sound artist Roald van Dillewijn</li>
+            <li>Presenting the outcomes of our creative process at Gaudeamus festival</li>
             <li>Knowledge and experience combining electronics with physical materials</li>
-            <li>Local/regional network of makers</li>
+            <li>A local network of creators</li>
             <li>Scenographic/dramaturgic expertise and coaching by professionals</li>
-            <li>Teensy 3.2/4.0</li>
-            <li>Sensors and Teensy Audio board at extra cost if needed for your project</li>
+            <li>A Teensy USB development board 3.2 or 4.0</li>
+            <li>Additional sensors and boards are available at extra cos</li>
           </ul>
         </p>
       </section>
