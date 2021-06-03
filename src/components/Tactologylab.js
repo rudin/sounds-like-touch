@@ -44,19 +44,20 @@ const Tactologylab = () => {
         </p>
         </section>
 
+    /*  
       <section>
         <h1>Sign up</h1>
         <p>
           Want to participate? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFvo43NYqwi1p1816kWYCq_7-T6cWH4Qmo7b8Ev8CiTnXtcg/viewform" rel="noreferrer noopener" target="_blank">Sign up here!</a>
         </p>
       </section>
+     */
 
       <section>
         <h1>Dates</h1>
         <p>
           <ul>
-            <li>24/6: Kick Off lecture &nbsp; performance LAB 1</li>
-            <li>01/7: Day 1</li>
+            <li><i>Day 1:   invent </i> &nbsp; 1 July &nbsp; morning and afternoon &nbsp; Lab Pastoe</li>
             <li>10/7: Day 2</li>
             <li>11/7: Day 3</li>
             <li>26/8: Day 4</li>
