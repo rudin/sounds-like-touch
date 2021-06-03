@@ -27,7 +27,7 @@ const Tactologylab = () => {
         </p>
       </section>
 
-<section>
+      <section>
         <h1>Lab 1: Exchange</h1>
         <p>
           Tactology Lab 1 enhances the exchange between local, professional artists and designers in Utrecht through multidisciplinary collaboration. Within groups, they develop physical, tangible electronic prototypes for a live performance context. In four days, participants will work towards exposing and performing their outcomes during the Gaudeamus festival in September 2021.
@@ -41,7 +41,8 @@ const Tactologylab = () => {
         </p>
         <p>
           It doesn’t matter if you are a beginner or advanced in working with electronics or physical materials; as long as you are interested in combining these, your contribution is valuable. Our exchange of expertise will lead us to an inspiring, creative space working towards new ways of tactile expression. Want to participate? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFvo43NYqwi1p1816kWYCq_7-T6cWH4Qmo7b8Ev8CiTnXtcg/viewform" rel="noreferrer noopener" target="_blank">Sign up here!</a>
-      </section>
+        </p>
+        </section>
 
       <section>
         <h1>Sign up</h1>
