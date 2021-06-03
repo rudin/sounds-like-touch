@@ -44,15 +44,6 @@ const Tactologylab = () => {
         </p>
         </section>
 
-    /*  
-      <section>
-        <h1>Sign up</h1>
-        <p>
-          Want to participate? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFvo43NYqwi1p1816kWYCq_7-T6cWH4Qmo7b8Ev8CiTnXtcg/viewform" rel="noreferrer noopener" target="_blank">Sign up here!</a>
-        </p>
-      </section>
-     */
-
       <section>
         <h1>Dates</h1>
         <p>
@@ -60,7 +51,7 @@ const Tactologylab = () => {
             <li><i>Day 1: invent </i> &nbsp;&nbsp; &nbsp; 1 July &nbsp; morning + afternoon &nbsp; Lab Pastoe</li>
             <li><i>Day 2: build </i> &nbsp;&nbsp; &nbsp; 10 July &nbsp; morning + afternoon &nbsp; Uitvindersgilde</li>
             <li><i>Day 3: interact </i> &nbsp; 11 July &nbsp; morning + afternoon &nbsp; Uitvindersgilde</li>
-            <li><i>Day 4: expose </i> &nbsp; &nbsp;&nbsp; 26 Augustus &nbsp; morning + afternoon &nbsp; TBA</li>
+            <li><i>Day 4: expose </i> &nbsp; &nbsp; 26 Augustus &nbsp; morning + afternoon &nbsp; TBA</li>
           </ul>
         </p>
         <p>
@@ -69,16 +60,6 @@ const Tactologylab = () => {
           </ul>
         </p>
       </section>
-
-/*
-      <section>
-        <h1>Location</h1>
-        <p>
-          Utrecht, The Netherlands<br />
-          Various lab spaces in Utrecht – TBA
-        </p>
-      </section>
-*/
 
       <section>
         <h1>What you get</h1>
