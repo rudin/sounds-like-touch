@@ -102,7 +102,7 @@ const Tactologylab = () => {
         <p>
           For any questions, please contact <a
             href="info@soundsliketouch.com"
-            style={{ color: "inherit", textDecoration: "none" }}
+            style={{ color: "inherit"}}
           >Sounds Like Touch
           </a>
         </p>
