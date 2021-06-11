@@ -74,7 +74,7 @@ const Tactologylab = () => {
             <li>A local network of creators</li>
             <li>Scenographic/dramaturgic expertise and coaching by professionals</li>
             <li>A Teensy USB development board 3.2 or 4.0</li>
-            <li>Additional sensors and boards are available at extra cos</li>
+            <li>Additional sensors and boards are available at extra cost</li>
           </ul>
         </p>
       </section>
@@ -100,7 +100,7 @@ const Tactologylab = () => {
       <section>
         <h1>Contact</h1>
         <p>
-          For any questions, please contact <a href="https://dianneverdonk.com/contact/" rel="noreferrer noopener" target="_blank">Dianne Verdonk</a>
+          For any questions, please contact <a href="https://dianneverdonk.com/contact/" rel="noreferrer noopener" target="_blank">Sounds Like Touch</a>
         </p>
       </section>
 
