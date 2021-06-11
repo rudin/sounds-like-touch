@@ -101,7 +101,7 @@ const Tactologylab = () => {
         <h1>Contact</h1>
         <p>
           For any questions, please contact <a
-            href="info@soundsliketouch.com"
+            href="mailto:info@soundsliketouch.com"
             style={{ color: "inherit"}}
           >Sounds Like Touch
           </a>
