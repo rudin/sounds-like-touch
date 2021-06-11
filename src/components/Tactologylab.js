@@ -100,7 +100,11 @@ const Tactologylab = () => {
       <section>
         <h1>Contact</h1>
         <p>
-          For any questions, please contact <a href="https://dianneverdonk.com/contact/" rel="noreferrer noopener" target="_blank">Sounds Like Touch</a>
+          For any questions, please contact <a
+            href="info@soundsliketouch.com"
+            style={{ color: "inherit", textDecoration: "none" }}
+          >Sounds Like Touch
+          </a>
         </p>
       </section>
 
