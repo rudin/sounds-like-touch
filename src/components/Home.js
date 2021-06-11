@@ -87,7 +87,7 @@ const Home = () => {
             href="mailto:info@soundsliketouch.com"
             style={{ color: "inherit", textDecoration: "none" }}
           >
-            dianneverdonk@gmail.com
+            info@soundsliketouch.com
           </a>
           <br />
           CoC: 74526707
