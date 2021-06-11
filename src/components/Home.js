@@ -84,7 +84,7 @@ const Home = () => {
           Utrecht, The Netherlands
           <br />
           <a
-            href="mailto:dianneverdonk@gmail.com"
+            href="mailto:info@soundsliketouch.com"
             style={{ color: "inherit", textDecoration: "none" }}
           >
             dianneverdonk@gmail.com
