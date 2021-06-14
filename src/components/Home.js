@@ -77,6 +77,15 @@ const Home = () => {
       <section>
         <p>
           <h1>Contact</h1>
+        <p>
+            <a href="https://www.facebook.com/soundsliketouch/" rel="noreferrer noopener" target="_blank"><u>Facebook</u></a>
+        </p>
+        <p>
+            <a href="https://www.instagram.com/soundsliketouch/" rel="noreferrer noopener" target="_blank"><u>Instagram</u></a>
+        </p>
+        <p>
+            <a href="https://www.linkedin.com/company/sounds-like-touch" rel="noreferrer noopener" target="_blank"><u>LinkedIn</u></a>
+        </p>
           Sounds Like Touch
           <br />
           Europalaan 2B - F1.19
