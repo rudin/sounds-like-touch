@@ -71,10 +71,10 @@ const Tactologylab = () => {
         <h1>What you get</h1>
         <p>
           <ul>
-            <li>Full 4-day programme, curated by performer and instrument designer
-              <a href="https://dianneverdonk.com/" rel="noreferrer noopener" target="_blank"> Dianne Verdonk </a>
-             and creative software designer and sound artist
-              <a href="https://roaldvandillewijn.nl/" rel="noreferrer noopener" target="_blank"> Roald van Dillewijn</a></li>
+            <li>Full 4-day programme, curated by performer and instrument designer&nbsp;
+              <a href="https://dianneverdonk.com/" rel="noreferrer noopener" target="_blank">Dianne Verdonk</a>
+             &nbsp;and creative software designer and sound artist&nbsp;
+              <a href="https://roaldvandillewijn.nl/" rel="noreferrer noopener" target="_blank">Roald van Dillewijn</a></li>
             <li>Presenting the outcomes of our creative process at Gaudeamus festival</li>
             <li>Knowledge and experience combining electronics with physical materials</li>
             <li>A local network of creators</li>
