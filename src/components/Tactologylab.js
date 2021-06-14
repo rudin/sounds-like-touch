@@ -40,9 +40,12 @@ const Tactologylab = () => {
           Providing a program and space for experiments, Tactology Lab is for you if you are interested as an artist or creator in working with electronics and exploring ways to connect physical and material to the digital and electronics to advance your art practice.
         </p>
         <p>
-          It doesn’t matter if you are a beginner or advanced at working with electronics or physical materials; as long as you are interested in combining these, your contribution is valuable. Our exchange of expertise will lead us to an inspiring, creative space working towards new ways of tactile expression. Want to participate? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFvo43NYqwi1p1816kWYCq_7-T6cWH4Qmo7b8Ev8CiTnXtcg/viewform" rel="noreferrer noopener" target="_blank">Sign up here!</a>
+          It doesn’t matter if you are a beginner or advanced at working with electronics or physical materials; as long as you are interested in combining these, your contribution is valuable. Our exchange of expertise will lead us to an inspiring, creative space working towards new ways of tactile expression. Want to participate? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFvo43NYqwi1p1816kWYCq_7-T6cWH4Qmo7b8Ev8CiTnXtcg/viewform" rel="noreferrer noopener" target="_blank">Fill in this form to sign up!</a>
         </p>
-        </section>
+        <p>
+          We care about a well balanced group of participants, aiming to bring together diverse makers with different skill levels and backgrounds. Therefore, the final selection of the program will be made by our Lab-makers/curators via a short, informal conversation with you via Zoom or in real life - if possible. 
+        </p>
+      </section>
 
       <section>
         <h1>Programme</h1>
