@@ -86,20 +86,12 @@ const Home = () => {
         <p>
             <a href="https://www.linkedin.com/company/sounds-like-touch" rel="noreferrer noopener" target="_blank"><u>LinkedIn</u></a>
         </p>
-          Sounds Like Touch
-          <br />
-          Europalaan 2B - F1.19
-          <br />
-          Utrecht, The Netherlands
-          <br />
           <a
             href="mailto:info@soundsliketouch.com"
             style={{ color: "inherit", textDecoration: "none" }}
           >
             info@soundsliketouch.com
           </a>
-          <br />
-          CoC: 74526707
         </p>
         <section style={{ paddingTop: "3em", paddingBottom: "3em" }}>
           <p>
