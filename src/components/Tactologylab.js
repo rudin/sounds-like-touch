@@ -48,7 +48,7 @@ const Tactologylab = () => {
       </section>
 
       <section>
-        <h1>Programme</h1>
+        <h1>Programme Tactology Lab 1: Exchange</h1>
         <p>
             Since this is a group project, it is important to be available at all of the Lab Days! All locations are in Utrecht, The Netherlands.
         </p>
@@ -99,7 +99,7 @@ const Tactologylab = () => {
       <section>
         <h1>Sign up</h1>
         <p>
-          Want to participate? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFvo43NYqwi1p1816kWYCq_7-T6cWH4Qmo7b8Ev8CiTnXtcg/viewform" rel="noreferrer noopener" target="_blank">Sign up here!</a>
+          Want to participate in future Tactology Labs? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFvo43NYqwi1p1816kWYCq_7-T6cWH4Qmo7b8Ev8CiTnXtcg/viewform" rel="noreferrer noopener" target="_blank">Sign up here!</a>
         </p>
       </section>
 
