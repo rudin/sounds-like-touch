@@ -102,7 +102,7 @@ const Tactologylab = () => {
       <section>
         <h1>Sign up</h1>
         <p>
-          Want to participate in future Tactology Labs? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFvo43NYqwi1p1816kWYCq_7-T6cWH4Qmo7b8Ev8CiTnXtcg/viewform" rel="noreferrer noopener" target="_blank">Sign up here!</a>
+          Want to participate in Tactology Lab 2? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFvo43NYqwi1p1816kWYCq_7-T6cWH4Qmo7b8Ev8CiTnXtcg/viewform" rel="noreferrer noopener" target="_blank">Sign up here!</a>
         </p>
       </section>
 
