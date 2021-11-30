@@ -83,7 +83,7 @@ const Tactologylab = () => {
             <li>Knowledge and experience combining electronics with physical materials</li>
             <li>A local network of creators</li>
             <li>Scenographic/dramaturgic expertise and coaching by professionals</li>
-            <li>A Teensy USB development board 3.2 or 4.0</li>
+            <li>A Teensy USB development board 4.0</li>
             <li>Additional sensors and boards are available at extra cost</li>
           </ul>
         </p>
