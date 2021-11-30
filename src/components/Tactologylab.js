@@ -66,7 +66,7 @@ const Tactologylab = () => {
           </ul>
         </p>
         <p>
-            *note: dates are with reservation and will be confirmed ASAP
+            <b>*note: dates are with reservation and will be confirmed ASAP</b>
         </p>
       </section>
 
