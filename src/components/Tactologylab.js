@@ -62,7 +62,7 @@ const Tactologylab = () => {
             <li><i>Day 3: construct </i> &nbsp;<b>20 March*</b> &nbsp;&nbsp; morning + afternoon</li>
             <li><i>Day 4: express </i> &nbsp;&nbsp; <b>27 March*</b>&nbsp; morning + afternoon</li>
             <li><i>Day 5: embed </i> &nbsp; &nbsp; <b>1 April*</b>&nbsp; morning + afternoon</li>
-            <li><i>Day 6: perform </i> &nbsp;&nbsp;<b>7-10 April*</b>&nbsp; morning + afternoon</li>
+            <li><i>Day 6: perform </i> &nbsp;<b>7-10 April*</b>&nbsp; morning + afternoon</li>
           </ul>
         </p>
         <p>
@@ -75,7 +75,7 @@ const Tactologylab = () => {
         <p>
           <ul>
             <li>Full 6-day programme, curated by performer and instrument designer 
-              &nbsp;<a href="https://dianneverdonk.com/" rel="noreferrer noopener" target="_blank">Dianne Verdonk</a>
+              <a href="https://dianneverdonk.com/" rel="noreferrer noopener" target="_blank">Dianne Verdonk</a>
              &nbsp;and creative software designer and sound artist&nbsp;
               <a href="https://roaldvandillewijn.nl/" rel="noreferrer noopener" target="_blank">Roald van Dillewijn</a></li>
             <li>Performance coaching and stage presence by theatre director Ramses Graus (Het Filiaal, Utrecht)</li>
