@@ -16,7 +16,7 @@ const Tactologylab = () => {
       </section>
       <section>
         <p>
-          Tactology Lab is a 4-day structured workshop and performance program for artists and creators of various skills and art disciplines, organised by Sounds Like Touch. We believe that expression through tactile electronics can amplify a personal, visible, rousing performance experience, enhancing a strong connection between performer and audience. With Tactology Lab, Sounds Like Touch provides a unique learning space, basic materials and coaching by professionals. Additionally, the creative processes and the results will be shared via an online platform to provide an international stage to local makers.
+          Tactology Lab is a 6-day structured workshop and performance programme for artists and creators of various skills and art disciplines, organised by Sounds Like Touch. We believe that expression through tactile electronics can amplify a personal, visible, rousing performance experience, enhancing a strong connection between performer and audience. With Tactology Lab, Sounds Like Touch provides a unique learning space, basic materials and coaching by professionals. Additionally, the creative processes and the results will be shared via an online platform to provide an international stage to local makers.
         </p>
         <p>
           {/* <a href="/" onClick={e => {
@@ -28,16 +28,19 @@ const Tactologylab = () => {
       </section>
 
       <section>
-        <h1>Lab 1: Exchange</h1>
+        <h1>Lab 2: Perform</h1>
         <p>
-          Tactology Lab 1 enhances the exchange between local, professional artists and designers in Utrecht through multidisciplinary collaboration. Within groups, they develop physical, tangible electronic prototypes for a live performance context. In four days, participants will work towards exposing and performing their outcomes during the Gaudeamus festival in September 2021.
+          Tactology Lab 2 invites local, professional artists and designers to work on their design and performance skills through multidisciplinary collaboration. Within groups, they develop physical, tangible electronic prototypes for a live performance context, which will be performed live at the Rewire festival 2022 in The Hague. Coached by experts, participants will work towards this performance within five separate workshop days before playing at Rewire.
+        </p>
+        <p>
+          You can sign up for Tactology Lab 2 if you’re a professional artist or creator - there’s no need to have participated in Lab 1. The programme of Lab 2 focuses primarily on working towards this performance, whereas Lab 1 mainly resulted in exposing the results. 
         </p>
       </section>
 
       <section>
         <h1>Participate</h1>
         <p>
-          Providing a program and space for experiments, Tactology Lab is for you if you are interested as an artist or creator in working with electronics and exploring ways to connect physical and material to the digital and electronics to advance your art practice.
+          Providing a programme and space for experiments, Tactology Lab is for you if you are interested as an artist or creator in working with electronics and exploring ways to connect physical and material to the digital and electronics to advance your art practice. If you want to learn how to improve your performance by exploring your personal expression through interaction with electronic tools, definitely sign up for Lab 2!
         </p>
         <p>
           It doesn’t matter if you are a beginner or advanced at working with electronics or physical materials; as long as you are interested in combining these, your contribution is valuable. Our exchange of expertise will lead us to an inspiring, creative space working towards new ways of tactile expression. Want to participate? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFvo43NYqwi1p1816kWYCq_7-T6cWH4Qmo7b8Ev8CiTnXtcg/viewform" rel="noreferrer noopener" target="_blank">Fill in this form to sign up!</a>
@@ -48,22 +51,22 @@ const Tactologylab = () => {
       </section>
 
       <section>
-        <h1>Programme Tactology Lab 1: Exchange</h1>
+        <h1>Programme Tactology Lab 2: Perform</h1>
         <p>
-            Since this is a group project, it is important to be available at all of the Lab Days! All locations are in Utrecht, The Netherlands.
+            Since this is a group project, it is important to be available at all of the Lab Days! All locations are in Utrecht and in The Hague, The Netherlands.
         </p>
         <p>
           <ul>
-            <li><i>Day 1: invent </i> &nbsp; &nbsp; <b>1 July</b> &nbsp;&nbsp; morning + afternoon</li>
-            <li><i>Day 2: build </i> &nbsp; &nbsp; <b>10 July</b> &nbsp;&nbsp; morning + afternoon</li>
-            <li><i>Day 3: interact </i> &nbsp;<b>11 July</b> &nbsp;&nbsp; morning + afternoon</li>
-            <li><i>Day 4: expose </i> &nbsp;&nbsp; <b>26 August</b>&nbsp; morning + afternoon</li>
+            <li><i>Day 1: inspire </i> &nbsp; &nbsp; <b>7 March*</b> &nbsp;&nbsp; morning + afternoon</li>
+            <li><i>Day 2: prototype </i> &nbsp; &nbsp; <b>19 March*</b> &nbsp;&nbsp; morning + afternoon</li>
+            <li><i>Day 3: construct </i> &nbsp;<b>20 March*</b> &nbsp;&nbsp; morning + afternoon</li>
+            <li><i>Day 4: express </i> &nbsp;&nbsp; <b>27 March*</b>&nbsp; morning + afternoon</li>
+            <li><i>Day 5: embed </i> &nbsp;&nbsp; <b>1 April*t</b>&nbsp; morning + afternoon</li>
+            <li><i>Day 6: perform </i> &nbsp;&nbsp; <b>7-10 April*</b>&nbsp; morning + afternoon</li>
           </ul>
         </p>
         <p>
-          <ul>
-            <li>Presentation outcome at Gaudeamus festival: <b>11 and 12 September</b></li>
-          </ul>
+            *note: dates are with reservation and will be confirmed ASAP
         </p>
       </section>
 
@@ -71,11 +74,12 @@ const Tactologylab = () => {
         <h1>What you get</h1>
         <p>
           <ul>
-            <li>Full 4-day programme, curated by performer and instrument designer&nbsp;
+            <li>Full 6-day programme, curated by performer and instrument designer
               <a href="https://dianneverdonk.com/" rel="noreferrer noopener" target="_blank">Dianne Verdonk</a>
              &nbsp;and creative software designer and sound artist&nbsp;
               <a href="https://roaldvandillewijn.nl/" rel="noreferrer noopener" target="_blank">Roald van Dillewijn</a></li>
-            <li>Presenting the outcomes of our creative process at Gaudeamus festival</li>
+            <li>Performance coaching and stage presence by theatre director Ramses Graus (Het Filiaal, Utrecht)</li>
+            <li>Perform the outcomes of our creative process, live at Rewire festival</li>
             <li>Knowledge and experience combining electronics with physical materials</li>
             <li>A local network of creators</li>
             <li>Scenographic/dramaturgic expertise and coaching by professionals</li>
@@ -90,8 +94,7 @@ const Tactologylab = () => {
         <h1>What you pay</h1>
         <p>
           <ul>
-            <li>Regular price: €150,-</li>
-            <li>Student price: €120,-</li>
+            <li>€150,-</li>
           </ul>
         </p>
       </section>
