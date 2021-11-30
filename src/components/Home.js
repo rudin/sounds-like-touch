@@ -10,7 +10,7 @@ const Home = () => {
     <div style={{ background: "#FFF" }}>
       <section>
         <p>
-          {`We are Sounds Like Touch, a platform and springboard for artists and creators to experiment with physical forms and ways of interaction with technology. Together with them, we aim to develop and encourage a tangible and accessible practice of the electronic performing arts. We believe that expression through tactile electronics can amplify a personal, visible, rousing performance experience, enhancing a strong connection between performer and audience.`}
+          {`We are Sounds Like Touch, a platform and springboard for artists and creators to experiment with new physical ways of interaction with technology. Together, we aim to develop and encourage a tangible and accessible practice of the electronic performing arts. We believe that expression through tactile electronics can amplify a personal, visible, rousing performance experience, enhancing a strong connection between performer and audience.`}
         </p>
       </section>
 
@@ -29,10 +29,11 @@ const Home = () => {
           <a href="/tactologylab" onClick={e => {
             e.preventDefault()
             push("/tactologylab")
-          }}>Tactology Lab</a>, a 4-day structured programme that brings artists and creators together. Tactology Lab is a space to experiment with expression through tactile interaction with materials and electronics in art practices.
+          }}>Tactology Lab</a>, a multiple-day structured programme that brings artists and creators together to explore new ways of (tactile) interaction with electronics. 
+
         </p>
         <p>
-            The programme enhances the exchange between local, professional artists and designers in Utrecht, collaborating on new tangible electronic ways of expression for a live performance context. The results of our first Tactology Lab will be presented during the Gaudeamus festival in September 2021.
+            The programme enhances the exchange between local, professional artists and designers in Utrecht, collaborating on new tangible electronic ways of expression for a live performance context. The results of our first Tactology Lab 1: Exchange, were presented during the Gaudeamus festival in September 2021. Participants of Lab 2: Perform, will perform live at the Rewire festival in April 2022.
         </p>
         <p>
           Are you an artist or creator and interested in participating in our Tactology Labs? <a href="/tactologylab" onClick={e => {
