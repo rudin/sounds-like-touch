@@ -75,7 +75,7 @@ const Tactologylab = () => {
         <p>
           <ul>
             <li>Full 6-day programme, curated by performer and instrument designer 
-              &nsbp;<a href="https://dianneverdonk.com/" rel="noreferrer noopener" target="_blank">Dianne Verdonk</a>
+              &nbsp;<a href="https://dianneverdonk.com/" rel="noreferrer noopener" target="_blank">Dianne Verdonk</a>
              &nbsp;and creative software designer and sound artist&nbsp;
               <a href="https://roaldvandillewijn.nl/" rel="noreferrer noopener" target="_blank">Roald van Dillewijn</a></li>
             <li>Performance coaching and stage presence by theatre director Ramses Graus (Het Filiaal, Utrecht)</li>
