@@ -87,15 +87,15 @@ const Home = () => {
         <p>
             <a href="https://www.linkedin.com/company/sounds-like-touch" rel="noreferrer noopener" target="_blank"><u>LinkedIn</u></a>
         </p>
-          <a
+        <p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdj-BOJRilznSnU8nE7mTf2YpiVqK9cc6FabAH_R1-DiKQ61w/viewform" rel="noreferrer noopener" target="_blank"><u>Subscribe to our newsletter</u></a>
+          </p>
+        <a
             href="mailto:info@soundsliketouch.com"
             style={{ color: "inherit", textDecoration: "none" }}
           >
             info@soundsliketouch.com
           </a>
-        <p> 
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdj-BOJRilznSnU8nE7mTf2YpiVqK9cc6FabAH_R1-DiKQ61w/viewform" rel="noreferrer noopener" target="_blank"><u>Subscribe to our newsletter</u></a>
-
         </p>
         <section style={{ paddingTop: "3em", paddingBottom: "3em" }}>
           <p>
