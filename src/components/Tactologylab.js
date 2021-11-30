@@ -79,7 +79,7 @@ const Tactologylab = () => {
              &nbsp;and creative software designer and sound artist&nbsp;
               <a href="https://roaldvandillewijn.nl/" rel="noreferrer noopener" target="_blank">Roald van Dillewijn</a></li>
             <li>Performance coaching and stage presence by theatre director&nbsp;
-              <a href="http://www.ramsesgraus.com/" rel="noreferrer noopener" target="_blank">Ramses Graus&nbsp;</a>(Het Filiaal, Utrecht)</li>
+              <a href="http://www.ramsesgraus.com/" rel="noreferrer noopener" target="_blank">Ramses Graus</a>&nbsp;(Het Filiaal, Utrecht)</li>
             <li>Perform the outcomes of our creative process, live at Rewire festival</li>
             <li>Knowledge and experience combining electronics with physical materials</li>
             <li>A local network of creators</li>
