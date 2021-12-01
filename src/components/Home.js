@@ -15,7 +15,10 @@ const Home = () => {
       </section>
 
       <section>
-        <h1>Tactology Lab</h1>
+        <a href="/tactologylab" onClick={e => {
+            e.preventDefault()
+            push("/tactologylab")
+          }}><h1>Tactology Lab</h1></a>
         <p>
           <i>Expression through tactile electronics</i>
 
@@ -88,7 +91,7 @@ const Home = () => {
             <a href="https://www.linkedin.com/company/sounds-like-touch" rel="noreferrer noopener" target="_blank"><u>LinkedIn</u></a>
         </p>
         <p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdj-BOJRilznSnU8nE7mTf2YpiVqK9cc6FabAH_R1-DiKQ61w/viewform" rel="noreferrer noopener" target="_blank"><u>Subscribe to our newsletter</u></a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdj-BOJRilznSnU8nE7mTf2YpiVqK9cc6FabAH_R1-DiKQ61w/viewform" rel="noreferrer noopener" target="_blank"><u>Newsletter</u></a>
           </p>
         <a
             href="mailto:info@soundsliketouch.com"
