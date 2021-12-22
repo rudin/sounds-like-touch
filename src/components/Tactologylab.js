@@ -30,6 +30,9 @@ const Tactologylab = () => {
       <section>
         <h1>Lab 2: Perform</h1>
         <p>
+          <b><i>Note: sign up for Lab 2 has closed!</i></b> 
+        </p>
+        <p>
           Tactology Lab 2 invites local, professional artists and designers to work on their design and performance skills through multidisciplinary collaboration. Within groups, they develop physical, tangible electronic prototypes for a live performance context, which will be performed live at the Rewire festival 2022 in The Hague. Coached by experts, participants will work towards this performance within five separate workshop days before playing at Rewire.
         </p>
         <p>
@@ -43,7 +46,7 @@ const Tactologylab = () => {
           Providing a programme and space for experiments, Tactology Lab is for you if you are interested as an artist or creator in working with electronics and exploring ways to connect physical and material to the digital and electronics to advance your art practice. If you want to learn how to improve your performance by exploring your personal expression through interaction with electronic tools, definitely sign up for Lab 2!
         </p>
         <p>
-          It doesn’t matter if you are a beginner or advanced at working with electronics or physical materials; as long as you are interested in combining these, your contribution is valuable. Our exchange of expertise will lead us to an inspiring, creative space working towards new ways of tactile expression. Want to participate? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFvo43NYqwi1p1816kWYCq_7-T6cWH4Qmo7b8Ev8CiTnXtcg/viewform" rel="noreferrer noopener" target="_blank">Fill in this form to sign up!</a>
+          It doesn’t matter if you are a beginner or advanced at working with electronics or physical materials; as long as you are interested in combining these, your contribution is valuable. Our exchange of expertise will lead us to an inspiring, creative space working towards new ways of tactile expression. //Want to participate? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFvo43NYqwi1p1816kWYCq_7-T6cWH4Qmo7b8Ev8CiTnXtcg/viewform" rel="noreferrer noopener" target="_blank">Fill in this form to sign up!</a>
         </p>
         <p>
           We care about a well balanced group of participants, aiming to bring together diverse makers with different skill levels and backgrounds. Therefore, the final selection of the program will be made by our Lab-makers/curators via a short, informal conversation with you via Zoom or in real life - if possible. 
@@ -102,7 +105,7 @@ const Tactologylab = () => {
       <section>
         <h1>Sign up</h1>
         <p>
-          Want to participate in Tactology Lab 2? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFvo43NYqwi1p1816kWYCq_7-T6cWH4Qmo7b8Ev8CiTnXtcg/viewform" rel="noreferrer noopener" target="_blank">Sign up here!</a>
+          Unfortunately, sign up for Tactology Lab has closed. Do you want to participate in future Tactology Labs? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFvo43NYqwi1p1816kWYCq_7-T6cWH4Qmo7b8Ev8CiTnXtcg/viewform" rel="noreferrer noopener" target="_blank">Fill out this form!</a>
         </p>
       </section>
 
