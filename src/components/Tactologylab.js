@@ -65,7 +65,7 @@ const Tactologylab = () => {
             <li><i>Day 3: construct </i> &nbsp;<b>20 March</b> &nbsp;&nbsp; morning + afternoon</li>
             <li><i>Day 4: express </i> &nbsp;&nbsp; <b>27 March</b>&nbsp; &nbsp; morning + afternoon</li>
             <li><i>Day 5: embed </i> &nbsp;&nbsp; &nbsp;&nbsp; <b>1 April</b>&nbsp; &nbsp; morning + afternoon</li>
-            <li><i>Day 6: perform </i> &nbsp;&nbsp; <b>9 April</b>&nbsp; &nbsp; one of these days</li>
+            <li><i>Day 6: perform </i> &nbsp;&nbsp; <b>9 April</b>&nbsp; &nbsp; morning to evening</li>
           </ul>
         </p>
 
