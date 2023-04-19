@@ -33,6 +33,7 @@ const Home = () => {
              {'The meetup is free, but we appreciate it if you let us know if you’re joining by filling in 
              <a href="https://forms.gle/BvyxA8StuXJ7ZMv67" rel="noreferrer noopener" target="_blank">this form</a>
          </p>
+             </section>
    
       <section>
             <p>
@@ -46,7 +47,9 @@ const Home = () => {
 <p>
                   {'Come by bike or public transport! The Makerspace is next to train/bus station Utrecht Zuilen. There is free parking in the area.'}
 </p>
+</section>
 
+<section>
 <h2>Accessibility</h2>    
                {'Language: English / Dutch'}
                 <br />
@@ -55,6 +58,7 @@ const Home = () => {
                 <br />
                   {'Also let us know if you need other things in terms of accessibility.'}
 </p>
+</section>
         <p>
               
       <section>
