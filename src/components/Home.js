@@ -128,7 +128,6 @@ const Home = () => {
         </p>
       </section>
       <section>
-        <p>
           <h1>Contact</h1>
         <p>
             <a href="https://www.facebook.com/soundsliketouch/" rel="noreferrer noopener" target="_blank"><u>Facebook</u></a>
