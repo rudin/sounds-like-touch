@@ -89,13 +89,15 @@ const Home = () => {
             e.preventDefault()
             push("/tactologylab")
           }}>Read more through this link!</a>
-        </p>
       </section>
+
+</p>
+
 
       <section>
           <h1>Who</h1>
           <a href="https://dianneverdonk.com/" rel="noreferrer noopener" target="_blank"><i>Dianne Verdonk</i></a>
-          <br />
+
           Initiator and Lab curator
         <p>
           {`Performer, composer and instrument developer - who seeks the ultimate, personal form of musical expression in the creation and performance of electronic/electroacoustic music.`}
