@@ -14,51 +14,13 @@ const Home = () => {
         </p>
       </section>
 
-      <section>
-         <h1>NIME 2023 Meetup</h1>
-          <p>
-           <i> at SLT Makerspace, Hof van Cartesius </i>
-          </p>
-          <p>
+<section>
+        <h1>NIME 2023 Meetup</h1>
+   <p>
           You might have heard of the International Conference on New Interfaces for Musical Expression (NIME). The conference gathers researchers and musicians from all over the world to share their knowledge and late-breaking work on new musical interface design.
-          </p>
-          <p>
-            This years’ edition will be held in Mexico City from May 31 till June 2nd. To join this conference from Utrecht, SLT is hosting a ‘hub’ meetup with drinks and tunes. For everyone who loves to geek out on electronic music and interaction and is curious about NIME, but can’t travel all the way to Mexico.
-          </p>
-          <p> 
-            You are welcome on May 31st at our Makerspace at Hof van Cartesius from 20:00 on. Dianne Verdonk (SLT), Martijn Buser (Gaudeamus festival) and Hans Leeuw (HKU Music and Technology) will give a short intro for those of you who are new to NIME and we’ll be watching some (live) performances. And for those who are interested in being part of next year’s conference, we’ll share the ways you can participate in the conference!
-           </p>
-        <p> 
-             The meetup is free, but we appreciate it if you let us know if you’re joining by filling in 
-             <a href="https://forms.gle/BvyxA8StuXJ7ZMv67" rel="noreferrer noopener" target="_blank">this form</a>
-         </p>
-             </section>
-   
-      <section>
-         <h2>Info</h2>    
-           <p>
-               Date and time: 31st of May from 20:00 (doors open at 19:30) till 22:00
-                <br />
-                  Location: SLT Makerspace at Hof van Cartesius, Vlampijpstraat 94, 3534 AR Utrecht
-                <br />
-                  Free entrance! Drinks are on donation (cash or Tikkie, no pin)
-            </p>
-            <p>
-                  Come by bike or public transport! The Makerspace is next to train/bus station Utrecht Zuilen. There is free parking in the area.
-            </p>
+     </p>
 </section>
 
-<section>
-<h2>Accessibility</h2>    
-        <p>
-               Language: English / Dutch
-                <br />
-                  Venue: The makerspace is on the first floor, only accessible by stairs. Please let us know if you are planning to join but the venue is inaccessible for you. Then we can try to make other arrangements.
-                <br />
-                  Also let us know if you need other things in terms of accessibility.
-        </p>
-</section>
-              
       <section>
         <a href="/tactologylab" onClick={e => {
             e.preventDefault()
@@ -66,17 +28,19 @@ const Home = () => {
           }}><h1>Tactology Lab</h1></a>
         <p>
           <i>Expression through tactile electronics</i>
+
         </p>
         <p>
           <div ref={ref} style={{ width: "100%", paddingBottom: "56.25%" }} />
         </p>
 
         <p>
-            Sounds Like Touch organises the so-called
+            {'Sounds Like Touch organises the so-called '}
           <a href="/tactologylab" onClick={e => {
             e.preventDefault()
             push("/tactologylab")
           }}>Tactology Lab</a>, a multiple-day structured programme that brings artists and creators together to explore new ways of (tactile) interaction with electronics. 
+
         </p>
         <p>
             The programme enhances the exchange between local, professional artists and designers in Utrecht, collaborating on new tangible electronic ways of expression for a live performance context. The results of our first Tactology Lab 1: Exchange, were presented during the Gaudeamus festival in September 2021. Participants of Lab 2: Perform, will perform live at the Rewire festival in April 2022.
@@ -88,16 +52,18 @@ const Home = () => {
           }}>Read more through this link!</a>
         </p>
       </section>
-
       <section>
+        <p>
           <h1>Who</h1>
           <a href="https://dianneverdonk.com/" rel="noreferrer noopener" target="_blank"><i>Dianne Verdonk</i></a>
+          <br />
           Initiator and Lab curator
+        </p>
         <p>
           {`Performer, composer and instrument developer - who seeks the ultimate, personal form of musical expression in the creation and performance of electronic/electroacoustic music.`}
         </p>
         <p><a href="https://roaldvandillewijn.nl/" rel="noreferrer noopener" target="_blank"><i>Roald van Dillewijn</i></a>
-          <br />
+            <br />
             Lab curator
         </p>
         <p>
@@ -120,6 +86,7 @@ const Home = () => {
         </p>
       </section>
       <section>
+        <p>
           <h1>Contact</h1>
         <p>
             <a href="https://www.facebook.com/soundsliketouch/" rel="noreferrer noopener" target="_blank"><u>Facebook</u></a>
@@ -139,6 +106,7 @@ const Home = () => {
           >
             info@soundsliketouch.com
           </a>
+        </p>
         <section style={{ paddingTop: "3em", paddingBottom: "3em" }}>
           <p>
             Made possible through <br />the generous support of:<br />
