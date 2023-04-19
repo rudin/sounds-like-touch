@@ -27,7 +27,7 @@ const Home = () => {
             {'This years’ edition will be held in Mexico City from May 31 till June 2nd. To join this conference from Utrecht, SLT is hosting a ‘hub’ meetup with drinks and tunes. For everyone who loves to geek out on electronic music and interaction and is curious about NIME, but can’t travel all the way to Mexico. '}
         </p>
         <p> 
-            {'You are welcome on May 31st at our Makerspace at Hof van Cartesius from 20:00 on. Dianne Verdonk (SLT), Martijn Buser (Gaudeamus festival) and Hans Leeuw (HKU Music & Technology) will give a short intro for those of you who are new to NIME and we’ll be watching some (live) performances. And for those who are interested in being part of next year’s conference, we’ll share the ways you can participate in the conference!')
+            {'You are welcome on May 31st at our Makerspace at Hof van Cartesius from 20:00 on. Dianne Verdonk (SLT), Martijn Buser (Gaudeamus festival) and Hans Leeuw (HKU Music & Technology) will give a short intro for those of you who are new to NIME and we’ll be watching some (live) performances. And for those who are interested in being part of next year’s conference, we’ll share the ways you can participate in the conference!'}
              </p>
         <p> 
              {'The meetup is free, but we appreciate it if you let us know if you’re joining by filling in 
@@ -53,8 +53,7 @@ const Home = () => {
 <h2>Accessibility</h2>    
                {'Language: English / Dutch'}
                 <br />
-                  {'Venue: The makerspace is on the first floor, only accessible by stairs. Please let us know if you are planning to join but the venue is inaccessible for you. Then we can try to make other arrangements. 
-'}
+                  {'Venue: The makerspace is on the first floor, only accessible by stairs. Please let us know if you are planning to join but the venue is inaccessible for you. Then we can try to make other arrangements.'}
                 <br />
                   {'Also let us know if you need other things in terms of accessibility.'}
 </p>
