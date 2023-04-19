@@ -15,9 +15,10 @@ const Home = () => {
       </section>
 
       <section>
-        <p>
+
           <h1>NIME 2023 Meetup</h1>
-          <br />
+        <p>
+
           <i> at SLT Makerspace, Hof van Cartesius </i>
         </p>
         <p>
@@ -36,8 +37,9 @@ const Home = () => {
              </section>
    
       <section>
-            <p>
+ 
               <h2>Info</h2>    
+           <p>
                Date & time: 31st of May from 20:00 (doors open at 19:30) till 22:00
                 <br />
                   Location: SLT Makerspace at Hof van Cartesius, Vlampijpstraat 94, 3534 AR Utrecht
@@ -50,8 +52,9 @@ const Home = () => {
 </section>
 
 <section>
-            <p>
+    
 <h2>Accessibility</h2>    
+        <p>
                Language: English / Dutch
                 <br />
                   Venue: The makerspace is on the first floor, only accessible by stairs. Please let us know if you are planning to join but the venue is inaccessible for you. Then we can try to make other arrangements.
