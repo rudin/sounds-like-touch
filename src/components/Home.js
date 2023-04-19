@@ -50,6 +50,7 @@ const Home = () => {
 </section>
 
 <section>
+            <p>
 <h2>Accessibility</h2>    
                {'Language: English / Dutch'}
                 <br />
@@ -58,7 +59,6 @@ const Home = () => {
                   {'Also let us know if you need other things in terms of accessibility.'}
 </p>
 </section>
-        <p>
               
       <section>
         <a href="/tactologylab" onClick={e => {
