@@ -31,7 +31,7 @@ const Home = () => {
              </p>
         <p> 
              {'The meetup is free, but we appreciate it if you let us know if you’re joining by filling in 
-             <a href="https://forms.gle/BvyxA8StuXJ7ZMv67" rel="noreferrer noopener" target="_blank">this form</a>
+             <a href="https://forms.gle/BvyxA8StuXJ7ZMv67" rel="noreferrer noopener" target="_blank">this form</a>'}
          </p>
              </section>
    
