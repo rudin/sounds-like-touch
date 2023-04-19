@@ -102,7 +102,7 @@ const Home = () => {
           {`Performer, composer and instrument developer - who seeks the ultimate, personal form of musical expression in the creation and performance of electronic/electroacoustic music.`}
         </p>
         <p><a href="https://roaldvandillewijn.nl/" rel="noreferrer noopener" target="_blank"><i>Roald van Dillewijn</i></a>
-            <br />
+          <br />
             Lab curator
         </p>
         <p>
