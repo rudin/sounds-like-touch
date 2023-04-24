@@ -16,9 +16,8 @@ const Home = () => {
 
       <section>
           <h1>NIME 2023 Meetup</h1>
-          <p>
+          <br />
           <i> at SLT Makerspace, Hof van Cartesius </i>
-        </p>
         <p>
           You might have heard of the International Conference on New Interfaces for Musical Expression (NIME). The conference gathers researchers and musicians from all over the world to share their knowledge and late-breaking work on new musical interface design.
         </p>
