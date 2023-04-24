@@ -10,9 +10,16 @@ const Home = () => {
     <div style={{ background: "#FFF" }}>
       <section>
         <p>
-          {`We are Sounds Like Touch, a platform and springboarrd for artists and creators to experiment with new physical ways of interaction with technology. Together, we aim to develop and encourage a tangible and accessible practice of the electronic performing arts. We believe that expression through tactile electronics can amplify a personal, visible, rousing performance experience, enhancing a strong connection between performer and audience.`}
+          {`We are Sounds Like Touch, a platform and springboard for artists and creators to experiment with new physical ways of interaction with technology. Together, we aim to develop and encourage a tangible and accessible practice of the electronic performing arts. We believe that expression through tactile electronics can amplify a personal, visible, rousing performance experience, enhancing a strong connection between performer and audience.`}
         </p>
       </section>
+
+<section>
+        <h1>NIME 2023 Meetup</h1>
+   <p>
+          You might have heard of the International Conference on New Interfaces for Musical Expression (NIME). The conference gathers researchers and musicians from all over the world to share their knowledge and late-breaking work on new musical interface design.
+     </p>
+</section>
 
       <section>
         <a href="/tactologylab" onClick={e => {
