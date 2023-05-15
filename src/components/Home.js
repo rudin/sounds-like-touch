@@ -62,12 +62,12 @@ const Home = () => {
       <section>
         <h2>Info</h2>
         <p>
-          Date and time: 31st of May from 20:00 (doors open at 19:30) till 22:00
+          - Date and time: 31st of May from 20:00 (doors open at 19:30)
           <br />
-          Location: SLT Makerspace at Hof van Cartesius, Vlampijpstraat 94, 3534
+          - Location: SLT Makerspace at Hof van Cartesius, Vlampijpstraat 94, 3534
           AR Utrecht
           <br />
-          Free entrance! Drinks are on donation (cash or Tikkie, no pin)
+          - Free entrance! Drinks are on donation (cash or Tikkie, no pin)
         </p>
         <p>
           Come by bike or public transport! The Makerspace is next to train/bus
