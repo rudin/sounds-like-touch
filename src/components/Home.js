@@ -21,7 +21,7 @@ const Home = () => {
       </section>
 
       <section>
-        <h1>NIME 2023 Meetup</h1>
+        <h1>NIME 2023 Meetup, 31 May 2023</h1>
         <p>
           <i> at SLT Makerspace, Hof van Cartesius </i>
           <br />
