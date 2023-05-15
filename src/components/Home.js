@@ -88,6 +88,9 @@ const Home = () => {
           is inaccessible for you. Then we can try to make other arrangements.
           <br />
           Also let us know if you need other things in terms of accessibility.
+          <br />
+          <br />
+          -------------------------------------------------------------
         </p>
       </section>
 
