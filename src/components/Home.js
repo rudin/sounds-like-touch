@@ -17,6 +17,8 @@ const Home = () => {
           expression through tactile electronics can amplify a personal,
           visible, rousing performance experience, enhancing a strong connection
           between performer and audience.
+          <br />
+          ----------------------------------------------------------------------
         </p>
       </section>
 
