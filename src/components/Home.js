@@ -60,7 +60,7 @@ const Home = () => {
       </section>
 
       <section>
-        <h2>Info</h2>
+        <h3>Info</h3>
         <p>
           - Date and time: 31st of May from 20:00 (doors open at 19:30)
           <br />
@@ -76,7 +76,7 @@ const Home = () => {
       </section>
 
       <section>
-        <h2>Accessibility</h2>
+        <h3>Accessibility</h3>
         <p>
           Language: English / Dutch
           <br />
