@@ -24,12 +24,12 @@ const Home = () => {
         <h1>NIME Meetup, 31 May 2023</h1>
         <p>
           <i> at SLT Makerspace, Hof van Cartesius </i>
-          <br />
+          <p>
           You might have heard of the International Conference on New Interfaces
           for Musical Expression (NIME). The conference gathers researchers and
           musicians from all over the world to share their knowledge and
           late-breaking work on new musical interface design.'}
-          <br />
+          </p>
           This years’ edition will be held in Mexico City from May 31 till June
           2nd. To join this conference from Utrecht, SLT is hosting a ‘hub’
           meetup with drinks and tunes. For everyone who loves to geek out on
