@@ -28,7 +28,7 @@ const Home = () => {
           You might have heard of the International Conference on New Interfaces
           for Musical Expression (NIME). The conference gathers researchers and
           musicians from all over the world to share their knowledge and
-          late-breaking work on new musical interface design.'}
+          late-breaking work on new musical interface design.
           </p>
           This years’ edition will be held in Mexico City from May 31 till June
           2nd. To join this conference from Utrecht, SLT is hosting a ‘hub’
