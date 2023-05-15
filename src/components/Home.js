@@ -23,7 +23,7 @@ const Home = () => {
       <section>
         <h1>NIME Meetup, 31 May 2023</h1>
         <p>
-          <i> at SLT Makerspace, Hof van Cartesius </i>
+          <i> at Sounds Like Touch Makerspace, Hof van Cartesius </i>
           <p>
           You might have heard of the International Conference on New Interfaces
           for Musical Expression (NIME). The conference gathers researchers and
@@ -39,7 +39,7 @@ const Home = () => {
           </p>
           <p>
           You are welcome on May 31st at our Makerspace at Hof van Cartesius
-          from 20:00 on. Dianne Verdonk (SLT), Martijn Buser (Gaudeamus
+          from 20:00 on. Dianne Verdonk (Sounds Like Touch), Martijn Buser (Gaudeamus
           festival) and Hans Leeuw (HKU Music and Technology) will give a short
           intro for those of you who are new to NIME and we’ll be watching some
           (live) performances. And for those who are interested in being part of
