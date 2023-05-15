@@ -80,9 +80,9 @@ const Home = () => {
       <section>
         <h3>Accessibility</h3>
         <p>
-          Language: English / Dutch
+          - Language: English / Dutch
           <br />
-          Venue: The makerspace is on the first floor, only accessible by
+          - Venue: The makerspace is on the first floor, only accessible by
           stairs. Please let us know if you are planning to join but the venue
           is inaccessible for you. Then we can try to make other arrangements.
           <br />
@@ -154,6 +154,7 @@ const Home = () => {
         >
           <i>Dianne Verdonk</i>
         </a>
+        <br />
         Initiator and Lab curator
         <p>
           {`Performer, composer and instrument developer - who seeks the ultimate, personal form of musical expression in the creation and performance of electronic/electroacoustic music.`}
