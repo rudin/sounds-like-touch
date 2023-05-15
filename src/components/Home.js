@@ -47,13 +47,13 @@ const Home = () => {
           the conference!
           </p>
           The meetup is free, but we appreciate it if you let us know if you’re
-          joining by filling in 
+          joining by filling in &nbsp;
           <a
             href="https://forms.gle/BvyxA8StuXJ7ZMv67"
             rel="noreferrer noopener"
             target="_blank"
           >
-            &nbsp; this form
+            this form
           </a>
         
         </p>
