@@ -18,6 +18,7 @@ const Home = () => {
           visible, rousing performance experience, enhancing a strong connection
           between performer and audience.
           <br />
+          <br />
           -------------------------------------------------------------
         </p>
       </section>
