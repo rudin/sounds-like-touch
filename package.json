@@ -6,7 +6,7 @@
   "scripts": {
     "build": "preact build --template src/index.html --no-prerender && cp redirects.txt build/_redirects",
     "serve": "sirv build --cors --single",
-    "dev": "preact watch --template src/index.html",
+    "dev": "export NODE_OPTIONS=--openssl-legacy-provider && preact watch --template src/index.html",
     "lint": "eslint src",
     "test": "jest",
     "deploy": "surge ./build https://slt.surge.sh"
