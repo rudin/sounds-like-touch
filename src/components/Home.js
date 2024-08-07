@@ -20,7 +20,15 @@ const Home = () => {
       <section>
         <h1>Program</h1>
         <p>
+        <a
+          href="/tactologylab"
+          onClick={(e) => {
+            e.preventDefault();
+            push("/tactologylab");
+          }}
+        >
           <u> Tactology Lab </u>
+        </a>
           <p>
           Since 2021 we organize the so-called Tactology Lab, a multiple-day structured program that bringst artists and creators together to explore new ways of (tactile) interaction with electronics.
           </p>
