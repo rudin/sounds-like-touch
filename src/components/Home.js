@@ -20,13 +20,14 @@ const Home = () => {
       <section>
         <h1>Program</h1>
         <p>
-        <a
+        /*<a
           href="/tactologylab"
           onClick={(e) => {
             e.preventDefault();
             push("/tactologylab");
           }}
-        >
+          
+        > */
           Tactology Lab
         </a>
           <p>
