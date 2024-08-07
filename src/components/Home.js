@@ -33,6 +33,9 @@ const Home = () => {
           Since 2021 we organize the so-called Tactology Lab, a multiple-day structured program that bringst artists and creators together to explore new ways of (tactile) interaction with electronics.
           </p>
           <p>
+          <div ref={ref} style={{ width: "100%", paddingBottom: "56.25%" }} />
+          </p>
+          <p>
           The program fosters the exchange between (local) professional artists and designers, collaborating on new tangible electronic ways of expression for a performance context: either live on stage or in an exhibition setting. 
           </p>
           <p>
@@ -48,10 +51,6 @@ const Home = () => {
 
       <section>
         
-        <p>
-          <div ref={ref} style={{ width: "100%", paddingBottom: "56.25%" }} />
-        </p>
-
         <p>
           Sounds Like Touch organises the so-called
           <a
