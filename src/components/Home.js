@@ -29,7 +29,7 @@ const Home = () => {
           
         > */
           <u> Tactology Lab </u>
-        </a>
+        //</a>
           <p>
           Since 2021 we organize the so-called Tactology Lab, a multiple-day structured program that bringst artists and creators together to explore new ways of (tactile) interaction with electronics.
           </p>
