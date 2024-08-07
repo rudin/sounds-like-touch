@@ -25,12 +25,10 @@ const Home = () => {
           Since 2021 we organize the so-called Tactology Lab, a multiple-day structured program that bringst artists and creators together to explore new ways of (tactile) interaction with electronics.
           </p>
     <br />
-    <br />
           <p>
           <div ref={ref} style={{ width: "100%", paddingBottom: "56.25%" }} />
           </p>
     <br />  
-    <br />
           <p>
           The program fosters the exchange between (local) professional artists and designers, collaborating on new tangible electronic ways of expression for a performance context: either live on stage or in an exhibition setting. 
           </p>
@@ -70,9 +68,9 @@ const Home = () => {
           rel="noreferrer noopener"
           target="_blank"
         >
-          <i>Dianne Verdonk</i> :
+          <i>Dianne Verdonk</i>
         </a>
-         artistic director & founder 
+         : artistic director & founder 
         <p>
           {`also: performer, songwriter and instrument inventor`}
         </p>
@@ -85,11 +83,11 @@ const Home = () => {
             <i>Roald van Dillewijn</i>
           </a>
           <br />
-          Lab curator
+          : lab curator
         </p>
         <p>
           {
-            "Sound artist, creative coder, designer and lecturer, always aiming to work on a new view of designing sounds and let them interact in a fascinating way."
+            "also: sound artist, creative coder, designer and lecturer"
           }
         </p>
         <p>
