@@ -49,6 +49,7 @@ const Home = () => {
           <h3> <i> Meetups </i> </h3>
           <p>
           We host meetups in the form of artist talks, workshops, brainstorm sessions and tryouts in our Makerspace. These meetups are a place for artists, designers and cultural workers to exchange ideas, knowledge and inspiration.
+          Do you want to organise a meetup at our Makerspace around your project? Please don't hesitate to get in touch with us!
           </p>
                         -------------------------------------------------------------
         </p>
