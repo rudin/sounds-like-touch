@@ -76,6 +76,7 @@ const Home = () => {
          : artistic director & founder 
 <p>
           {`also: performer, songwriter and instrument inventor`}
+</p>
         <p>
           <a
             href="https://roaldvandillewijn.nl/"
