@@ -20,16 +20,7 @@ const Home = () => {
       <section>
         <h1>Program</h1>
         <p>
-        /*<a
-          href="/tactologylab"
-          onClick={(e) => {
-            e.preventDefault();
-            push("/tactologylab");
-          }}
-          
-        > */
-          <u> Tactology Lab </u>
-        //</a>
+          <i> Tactology Lab </i>
           <p>
           Since 2021 we organize the so-called Tactology Lab, a multiple-day structured program that bringst artists and creators together to explore new ways of (tactile) interaction with electronics.
           </p>
@@ -39,24 +30,30 @@ const Home = () => {
           <p>
           The results of Tactology Lab 1: ‘Exchange’ were presented during Gaudeamus festival in 2021 and the results of Lab 2: ‘Perform’ during Rewire festival 2022. The next Tactology Lab is expected in the first half of 2025.
           </p>
-          <u> Meetups </u>
+          <i> Meetups </i>
           <p>
-          We host meetups in the form of artist talks, workshops, brainstorm sessions and tryouts in our Makerspace. These meetups are a place for artists, designers and cultural workers to exchange ideas, knowledge and inspiration. 
+          On an irregular basis, we host meetups in the form of artist talks, workshops, brainstorm sessions and tryouts in our Makerspace. These meetups are a place for artists, designers and cultural workers to exchange ideas, knowledge and inspiration. 
           </p>
-          //<p>
-          //<div ref={ref} style={{ width: "100%", paddingBottom: "56.25%" }} />
-          //</p>
         </p>
       </section>
 
 
       <section>
-        
+        <a
+          href="/tactologylab"
+          onClick={(e) => {
+            e.preventDefault();
+            push("/tactologylab");
+          }}
+        >
           <h1>Tactology Lab</h1>
+        </a>
         <p>
           <i>Expression through tactile electronics</i>
         </p>
-        
+        <p>
+          <div ref={ref} style={{ width: "100%", paddingBottom: "56.25%" }} />
+        </p>
 
         <p>
           Sounds Like Touch organises the so-called
@@ -98,7 +95,6 @@ const Home = () => {
 
       <section>
         <h1>Who</h1>
-              <i> team </>
         <a
           href="https://dianneverdonk.com/"
           rel="noreferrer noopener"
