@@ -43,38 +43,7 @@ const Home = () => {
           </p>
           <u> Meetups </u>
           <p>
-          We host meetups in the form of artist talks, workshops, brainstorm sessions and tryouts in our Makerspace. These meetups are a place for artists, designers and cultural workers to exchange ideas, knowledge and inspiration. 
-          </p>
-        </p>
-      </section>
-
-
-      <section>
-        
-        <p>
-          Sounds Like Touch organises the so-called
-          <a
-            href="/tactologylab"
-            onClick={(e) => {
-              e.preventDefault();
-              push("/tactologylab");
-            }}
-          >
-            Tactology Lab
-          </a>
-          , a multiple-day structured programme that brings artists and creators
-          together to explore new ways of (tactile) interaction with
-          electronics.
-        </p>
-        <p>
-          The programme enhances the exchange between local, professional
-          artists and designers in Utrecht, collaborating on new tangible
-          electronic ways of expression for a live performance context. The
-          results of our first Tactology Lab 1: Exchange, were presented during
-          the Gaudeamus festival in September 2021. Participants of Lab 2:
-          Perform, will perform live at the Rewire festival in April 2022.
-        </p>
-        <p>
+          We host meetups in the form of artist talks, workshops, brainstorm sessions and tryouts in our Makerspace. These meetups are a place for artists, designers and cultural workers to exchange ideas, knowledge and inspiration. <p>
           Are you an artist or creator and interested in participating in our
           Tactology Labs?{" "}
           <a
@@ -84,8 +53,10 @@ const Home = () => {
               push("/tactologylab");
             }}
           >
-            Read more through this link!
+            Read more about the program here!
           </a>
+        </p>
+          </p>
         </p>
       </section>
 
