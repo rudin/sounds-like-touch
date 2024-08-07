@@ -60,7 +60,7 @@ const Home = () => {
           </p>
         </p>
       </section>
-
+<br />
       <section>
         <h1>Who</h1>
         <a
