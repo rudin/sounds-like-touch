@@ -58,11 +58,11 @@ const Home = () => {
             Do you want to organise a meetup at our Makerspace around your project? Please don't hesitate to get in touch with us!
           </p>
           <br />
-          <br />
           -------------------------------------------------------------
         </p>
       </section>
-<br />
+
+              
       <section>
         <h1>Who</h1>
         <a
