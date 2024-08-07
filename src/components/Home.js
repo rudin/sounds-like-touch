@@ -20,6 +20,13 @@ const Home = () => {
       <section>
         <h1>Program</h1>
         <p>
+        <a
+          href="/tactologylab"
+          onClick={(e) => {
+            e.preventDefault();
+            push("/tactologylab");
+          }}
+        >
           <u> Tactology Lab </u>
           <p>
           Since 2021 we organize the so-called Tactology Lab, a multiple-day structured program that bringst artists and creators together to explore new ways of (tactile) interaction with electronics.
@@ -34,20 +41,14 @@ const Home = () => {
           <u> Meetups </u>
           </p>
           <p>
-          On an irregular basis, we host meetups in the form of artist talks, workshops, brainstorm sessions and tryouts in our Makerspace. These meetups are a place for artists, designers and cultural workers to exchange ideas, knowledge and inspiration. 
+          We host meetups in the form of artist talks, workshops, brainstorm sessions and tryouts in our Makerspace. These meetups are a place for artists, designers and cultural workers to exchange ideas, knowledge and inspiration. 
           </p>
         </p>
       </section>
 
 
       <section>
-        <a
-          href="/tactologylab"
-          onClick={(e) => {
-            e.preventDefault();
-            push("/tactologylab");
-          }}
-        >
+        
           <h1>Tactology Lab</h1>
         </a>
         <p>
