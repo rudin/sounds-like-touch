@@ -74,7 +74,11 @@ const Home = () => {
           <i>Dianne Verdonk</i>
         </a>
          : artistic director & founder 
-          {`also: performer, songwriter and instrument inventor`}
+           </p>
+          <p>
+          {
+            "also: performer, songwriter and instrument inventor"
+          }
  </p>
         <p>
           <a
