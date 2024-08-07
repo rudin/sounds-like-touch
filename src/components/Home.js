@@ -63,7 +63,7 @@ const Home = () => {
               
       <section>
         <h1>Who</h1>
-              <p>
+          <p>
           <h3> <i> Team </i> </h3>
           <p>
         <a
@@ -75,6 +75,7 @@ const Home = () => {
         </a>
          : artistic director & founder 
           {`also: performer, songwriter and instrument inventor`}
+</p>
         <p>
           <a
             href="https://roaldvandillewijn.nl/"
