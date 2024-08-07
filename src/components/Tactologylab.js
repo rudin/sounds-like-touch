@@ -44,19 +44,16 @@ const Tactologylab = () => {
           </b>
         </p>
         <p>
-          Tactology Lab 2 invites local, professional artists and designers to
+          Tactology Lab invites local, professional artists and designers to
           work on their design and performance skills through multidisciplinary
           collaboration. Within groups, they develop physical, tangible
-          electronic prototypes for a live performance context, which will be
-          performed live at the Rewire festival 2022 in The Hague. Coached by
+          electronic prototypes for a live performance context (tba). Coached by
           experts, participants will work towards this performance within five
           separate workshop days before playing at Rewire.
         </p>
         <p>
-          You can sign up for Tactology Lab 2 if you’re a professional artist or
-          creator - there’s no need to have participated in Lab 1. The programme
-          of Lab 2 focuses primarily on working towards this performance,
-          whereas Lab 1 mainly resulted in exposing the results.
+          You can sign up for Tactology Lab if you’re a professional artist or
+          creator.
         </p>
       </section>
 
@@ -69,7 +66,7 @@ const Tactologylab = () => {
           digital and electronics to advance your art practice. If you want to
           learn how to improve your performance by exploring your personal
           expression through interaction with electronic tools, definitely sign
-          up for Lab 2!
+          up for the next Lab!
         </p>
         <p>
           It doesn’t matter if you are a beginner or advanced at working with
@@ -88,13 +85,14 @@ const Tactologylab = () => {
       </section>
 
       <section>
-        <h1>Programme Tactology Lab 2: Perform</h1>
+        <h1>Programme Tactology Lab 3: tba</h1>
         <p>
           Since this is a group project, it is important to be available at all
-          of the Lab Days! All locations are in Utrecht and in The Hague, The
-          Netherlands.
+          of the Lab Days. Dates are to be announced coming autumn.
         </p>
-        <p>
+        /* 
+            {
+            <p>
           <ul>
             <li>
               <i>Day 1: inspire </i> &nbsp; &nbsp; <b>8 March</b> &nbsp;&nbsp;
@@ -122,6 +120,8 @@ const Tactologylab = () => {
             </li>
           </ul>
         </p>
+            }
+            */
       </section>
 
       <section>
