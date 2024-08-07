@@ -10,13 +10,7 @@ const Home = () => {
     <div style={{ background: "#FFF" }}>
       <section>
         <p>
-          We are Sounds Like Touch, a platform and springboard for artists and
-          creators to experiment with new physical ways of interaction with
-          technology. Together, we aim to develop and encourage a tangible and
-          accessible practice of the electronic performing arts. We believe that
-          expression through tactile electronics can amplify a personal,
-          visible, rousing performance experience, enhancing a strong connection
-          between performer and audience.
+          We are Sounds Like Touch, a springboard for artists, designers and creators who like to make (literally) touching, electronic, performative arts by using their body for interaction. To be able to do this, many different expertises are needed. That is why Sounds Like Touch connects makers with different skill sets for collaboration and exchange of knowledge. 
           <br />
           <br />
           -------------------------------------------------------------
@@ -24,75 +18,23 @@ const Home = () => {
       </section>
 
       <section>
-        <h1>NIME Meetup, 31 May 2023</h1>
+        <h1>Program</h1>
         <p>
-          <i> at Sounds Like Touch Makerspace, Hof van Cartesius </i>
+          <i> Tactology Lab </i>
           <p>
-          You might have heard of the International Conference on New Interfaces
-          for Musical Expression (NIME). The conference gathers researchers and
-          musicians from all over the world to share their knowledge and
-          late-breaking work on new musical interface design.
+          Since 2021 we organize the so-called Tactology Lab, a multiple-day structured program that bringst artists and creators together to explore new ways of (tactile) interaction with electronics.
           </p>
           <p>
-          This years’ edition will be held in Mexico City from May 31 till June
-          2nd. To join this conference from Utrecht, SLT is hosting a ‘hub’
-          meetup with drinks and tunes. For everyone who loves to geek out on
-          electronic music and interaction and is curious about NIME, but can’t
-          travel all the way to Mexico.
+          The program fosters the exchange between (local) professional artists and designers, collaborating on new tangible electronic ways of expression for a performance context: either live on stage or in an exhibition setting. 
           </p>
           <p>
-          You are welcome on May 31st at our Makerspace at Hof van Cartesius
-          from 20:00 on. Dianne Verdonk (Sounds Like Touch), Martijn Buser (Gaudeamus
-          festival) and Hans Leeuw (HKU Music and Technology) will give a short
-          intro for those of you who are new to NIME and we’ll be watching some
-          (live) performances. And for those who are interested in being part of
-          next year’s conference, we’ll share the ways you can participate in
-          the conference!
+          The results of Tactology Lab 1: ‘Exchange’ were presented during Gaudeamus festival in 2021 and the results of Lab 2: ‘Perform’ during Rewire festival 2022. The next Tactology Lab is expected in the first half of 2025.
           </p>
-          The meetup is free, but we appreciate it if you let us know if you’re
-          joining by filling in&nbsp;
-          <a
-            href="https://forms.gle/BvyxA8StuXJ7ZMv67"
-            rel="noreferrer noopener"
-            target="_blank"
-          >
-            this form
-          </a>
-        
+          <i> Meetups </i>
+          On an irregular basis, we host meetups in the form of artist talks, workshops, brainstorm sessions and tryouts in our Makerspace. These meetups are a place for artists, designers and cultural workers to exchange ideas, knowledge and inspiration. 
         </p>
       </section>
 
-      <section>
-        <h3>Info</h3>
-        <p>
-          - Date and time: 31st of May from 20:00 (doors open at 19:30)
-          <br />
-          - Location: SLT Makerspace at Hof van Cartesius, Vlampijpstraat 94, 3534
-          AR Utrecht
-          <br />
-          - Free entrance! Drinks are on donation (cash or Tikkie, no pin)
-        </p>
-        <p>
-          Come by bike or public transport! The Makerspace is next to train/bus
-          station Utrecht Zuilen. There is free parking in the area.
-        </p>
-      </section>
-
-      <section>
-        <h3>Accessibility</h3>
-        <p>
-          - Language: English / Dutch
-          <br />
-          - Venue: The makerspace is on the first floor, only accessible by
-          stairs. Please let us know if you are planning to join but the venue
-          is inaccessible for you. Then we can try to make other arrangements.
-          <br />
-          Also let us know if you need other things in terms of accessibility.
-          <br />
-          <br />
-          -------------------------------------------------------------
-        </p>
-      </section>
 
       <section>
         <a
