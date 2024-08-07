@@ -28,7 +28,7 @@ const Home = () => {
           }}
           
         > */
-          Tactology Lab
+          <u> Tactology Lab </u>
         </a>
           <p>
           Since 2021 we organize the so-called Tactology Lab, a multiple-day structured program that bringst artists and creators together to explore new ways of (tactile) interaction with electronics.
@@ -43,9 +43,9 @@ const Home = () => {
           <p>
           We host meetups in the form of artist talks, workshops, brainstorm sessions and tryouts in our Makerspace. These meetups are a place for artists, designers and cultural workers to exchange ideas, knowledge and inspiration. 
           </p>
-          <p>
-          <div ref={ref} style={{ width: "100%", paddingBottom: "56.25%" }} />
-          </p>
+          //<p>
+          //<div ref={ref} style={{ width: "100%", paddingBottom: "56.25%" }} />
+          //</p>
         </p>
       </section>
 
