@@ -27,7 +27,7 @@ const Home = () => {
             push("/tactologylab");
           }}
         >
-          <u> Tactology Lab </u>
+          Tactology Lab
         </a>
           <p>
           Since 2021 we organize the so-called Tactology Lab, a multiple-day structured program that bringst artists and creators together to explore new ways of (tactile) interaction with electronics.
