@@ -20,7 +20,7 @@ const Home = () => {
       <section>
         <h1>Program</h1>
         <p>
-          <i> Tactology Lab </i>
+          <u> Tactology Lab </u>
           <p>
           Since 2021 we organize the so-called Tactology Lab, a multiple-day structured program that bringst artists and creators together to explore new ways of (tactile) interaction with electronics.
           </p>
@@ -30,7 +30,7 @@ const Home = () => {
           <p>
           The results of Tactology Lab 1: ‘Exchange’ were presented during Gaudeamus festival in 2021 and the results of Lab 2: ‘Perform’ during Rewire festival 2022. The next Tactology Lab is expected in the first half of 2025.
           </p>
-          <i> Meetups </i>
+          <u> Meetups </u>
           <p>
           On an irregular basis, we host meetups in the form of artist talks, workshops, brainstorm sessions and tryouts in our Makerspace. These meetups are a place for artists, designers and cultural workers to exchange ideas, knowledge and inspiration. 
           </p>
