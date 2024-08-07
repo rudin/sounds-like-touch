@@ -32,7 +32,7 @@ const Home = () => {
           </p>
           <u> Meetups </u>
           <p>
-          On an irregular basis, we host meetups in the form of artist talks, workshops, brainstorm sessions and tryouts in our Makerspace. These meetups are a place for artists, designers and cultural workers to exchange ideas, knowledge and inspiration. 
+          We host meetups in the form of artist talks, workshops, brainstorm sessions and tryouts in our Makerspace. These meetups are a place for artists, designers and cultural workers to exchange ideas, knowledge and inspiration. 
           </p>
         </p>
       </section>
