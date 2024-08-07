@@ -18,7 +18,7 @@ const Home = () => {
       </section>
 
       <section>
-        <h5>Program</h5>
+        <h1>Program</h1>
         <p>
         <a
           href="/tactologylab"
