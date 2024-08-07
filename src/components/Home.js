@@ -41,10 +41,8 @@ const Home = () => {
           <p>
           The results of Tactology Lab 1: ‘Exchange’ were presented during Gaudeamus festival in 2021 and the results of Lab 2: ‘Perform’ during Rewire festival 2022. The next Tactology Lab is expected in the first half of 2025.
           </p>
-          <u> Meetups </u>
           <p>
-          We host meetups in the form of artist talks, workshops, brainstorm sessions and tryouts in our Makerspace. These meetups are a place for artists, designers and cultural workers to exchange ideas, knowledge and inspiration. <p>
-          Are you an artist or creator and interested in participating in our
+            Are you an artist or creator and interested in participating in our
           Tactology Labs?{" "}
           <a
             href="/tactologylab"
@@ -55,7 +53,10 @@ const Home = () => {
           >
             Read more about the program here!
           </a>
-        </p>
+              </p>
+          <u> Meetups </u>
+          <p>
+          We host meetups in the form of artist talks, workshops, brainstorm sessions and tryouts in our Makerspace. These meetups are a place for artists, designers and cultural workers to exchange ideas, knowledge and inspiration.
           </p>
         </p>
       </section>
