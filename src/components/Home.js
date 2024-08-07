@@ -28,6 +28,7 @@ const Home = () => {
           }}
         >
           <u> Tactology Lab </u>
+        </a>
           <p>
           Since 2021 we organize the so-called Tactology Lab, a multiple-day structured program that bringst artists and creators together to explore new ways of (tactile) interaction with electronics.
           </p>
@@ -53,7 +54,6 @@ const Home = () => {
       <section>
         
           <h1>Tactology Lab</h1>
-        </a>
         <p>
           <i>Expression through tactile electronics</i>
         </p>
