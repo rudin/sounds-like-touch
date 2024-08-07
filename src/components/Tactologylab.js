@@ -90,8 +90,8 @@ const Tactologylab = () => {
           Since this is a group project, it is important to be available at all
           of the Lab Days. Dates are to be announced coming autumn.
         </p>
-        /* 
-            {
+        {
+          /* 
             <p>
           <ul>
             <li>
@@ -120,8 +120,8 @@ const Tactologylab = () => {
             </li>
           </ul>
         </p>
-            }
             */
+           }
       </section>
 
       <section>
