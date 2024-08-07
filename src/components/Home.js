@@ -47,18 +47,7 @@ const Home = () => {
 
 
       <section>
-        <a
-          href="/tactologylab"
-          onClick={(e) => {
-            e.preventDefault();
-            push("/tactologylab");
-          }}
-        >
-          <h1>Tactology Lab</h1>
-        </a>
-        <p>
-          <i>Expression through tactile electronics</i>
-        </p>
+        
         <p>
           <div ref={ref} style={{ width: "100%", paddingBottom: "56.25%" }} />
         </p>
