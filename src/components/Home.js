@@ -63,6 +63,9 @@ const Home = () => {
               
       <section>
         <h1>Who</h1>
+              <p>
+          <h3> <i> Team </i> </h3>
+          <p>
         <a
           href="https://dianneverdonk.com/"
           rel="noreferrer noopener"
@@ -89,6 +92,9 @@ const Home = () => {
             "also: sound artist, creative coder, designer and lecturer"
           }
         </p>
+            <p>
+          <h3> <i> Board </i> </h3>
+          <p>
         <p>
           <i>Rens Machielse</i>
           <br />
