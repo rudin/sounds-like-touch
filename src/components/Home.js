@@ -70,12 +70,11 @@ const Home = () => {
           rel="noreferrer noopener"
           target="_blank"
         >
-          <i>Dianne Verdonk</i>
+          <i>Dianne Verdonk</i> :
         </a>
-        <br />
-        Initiator and Lab curator
+         artistic director & founder 
         <p>
-          {`Performer, composer and instrument developer - who seeks the ultimate, personal form of musical expression in the creation and performance of electronic/electroacoustic music.`}
+          {`also: performer, songwriter and instrument inventor`}
         </p>
         <p>
           <a
