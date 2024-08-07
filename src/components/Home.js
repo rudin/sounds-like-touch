@@ -43,6 +43,9 @@ const Home = () => {
           <p>
           We host meetups in the form of artist talks, workshops, brainstorm sessions and tryouts in our Makerspace. These meetups are a place for artists, designers and cultural workers to exchange ideas, knowledge and inspiration. 
           </p>
+          <p>
+          <div ref={ref} style={{ width: "100%", paddingBottom: "56.25%" }} />
+          </p>
         </p>
       </section>
 
@@ -54,9 +57,7 @@ const Home = () => {
         <p>
           <i>Expression through tactile electronics</i>
         </p>
-        <p>
-          <div ref={ref} style={{ width: "100%", paddingBottom: "56.25%" }} />
-        </p>
+        
 
         <p>
           Sounds Like Touch organises the so-called
