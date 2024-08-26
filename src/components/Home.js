@@ -103,6 +103,8 @@ const Home = () => {
           <i>Rens Machielse</i>
           <br />
           Chair
+            <br />
+            Activities and positions: Moderator HKU Research in Creative Practices, MIMM Board member, producer for MiMM the online magazine Private Kitchen
         </p>
         <p>
           <i>Rob van Rijswijk</i>
