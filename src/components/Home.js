@@ -117,6 +117,7 @@ const Home = () => {
           <i>Marisa Tempel</i>
           <br />
           Treasurer
+              </p>
         </p>
       </section>
       
