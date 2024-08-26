@@ -101,9 +101,11 @@ const Home = () => {
             </p>
         <p>
           <i>Rens Machielse</i>
-          <br />
-          Chair
+          : Chair
             <br />
+            {
+            "also: Composer, lecturer, researcher and advisor"
+          }
             Activities and positions: Moderator HKU Research in Creative Practices, MIMM Board member, producer for MiMM the online magazine Private Kitchen
         </p>
         <p>
