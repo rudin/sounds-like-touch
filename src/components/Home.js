@@ -98,7 +98,7 @@ const Home = () => {
             <br>
             <p>
           <h3> <i> Board </i> </h3>
-        <p>
+            </p>
         <p>
           <i>Rens Machielse</i>
           <br />
