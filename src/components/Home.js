@@ -115,8 +115,11 @@ const Home = () => {
         </p>
         <p>
           <i>Marisa Tempel</i>
-          <br />
-          Treasurer
+          : Treasurer
+            <br />
+            {
+            "also: (interim) business manager, fundraiser en communication advisor"
+          }
               </p>
         </p>
       </section>
